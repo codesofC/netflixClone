@@ -1,0 +1,454 @@
+{
+    "titles": [
+        {
+            "summary": {
+                "id": 1
+            },
+            "jawSummary": {
+                "backgroundImage": {
+                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "jpg"
+                },
+                "logoImage": {
+                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "png"
+                },
+                "type": "show",
+                "runtime": 504,
+                "genres": [
+                    { "id": 1, "name": "drama" }
+                ]
+            },
+            "episodeCount": 6
+        },
+        {
+            "summary": {
+                "id": 2
+            },
+            "jawSummary": {
+                "backgroundImage": {
+                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "jpg"
+                },
+                "logoImage": {
+                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "png"
+                },
+                "type": "show",
+                "runtime": 504,
+                "genres": [
+                    { "id": 1, "name": "drama" }
+                ]
+            },
+            "episodeCount": 6
+        },
+        {
+            "summary": {
+                "id": 3
+            },
+            "jawSummary": {
+                "backgroundImage": {
+                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "jpg"
+                },
+                "logoImage": {
+                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "png"
+                },
+                "type": "show",
+                "runtime": 504,
+                "genres": [
+                    { "id": 1, "name": "drama" }
+                ]
+            },
+            "episodeCount": 6
+        },
+        {
+            "summary": {
+                "id": 4
+            },
+            "jawSummary": {
+                "backgroundImage": {
+                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "jpg"
+                },
+                "logoImage": {
+                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "png"
+                },
+                "type": "show",
+                "runtime": 504,
+                "genres": [
+                    { "id": 1, "name": "drama" }
+                ]
+            },
+            "episodeCount": 6
+        },
+        {
+            "summary": {
+                "id": 5
+            },
+            "jawSummary": {
+                "backgroundImage": {
+                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "jpg"
+                },
+                "logoImage": {
+                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "png"
+                },
+                "type": "show",
+                "runtime": 504,
+                "genres": [
+                    { "id": 1, "name": "drama" }
+                ]
+            },
+            "episodeCount": 6
+        },
+        {
+            "summary": {
+                "id": 6
+            },
+            "jawSummary": {
+                "backgroundImage": {
+                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "jpg"
+                },
+                "logoImage": {
+                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "png"
+                },
+                "type": "show",
+                "runtime": 504,
+                "genres": [
+                    { "id": 1, "name": "drama" }
+                ]
+            },
+            "episodeCount": 6
+        },
+        {
+            "summary": {
+                "id": 7
+            },
+            "jawSummary": {
+                "backgroundImage": {
+                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "jpg"
+                },
+                "logoImage": {
+                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "png"
+                },
+                "type": "show",
+                "runtime": 504,
+                "genres": [
+                    { "id": 1, "name": "drama" }
+                ]
+            },
+            "episodeCount": 6
+        },
+        {
+            "summary": {
+                "id": 8
+            },
+            "jawSummary": {
+                "backgroundImage": {
+                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "jpg"
+                },
+                "logoImage": {
+                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "png"
+                },
+                "type": "show",
+                "runtime": 504,
+                "genres": [
+                    { "id": 1, "name": "drama" }
+                ]
+            },
+            "episodeCount": 6
+        },
+        {
+            "summary": {
+                "id": 9
+            },
+            "jawSummary": {
+                "backgroundImage": {
+                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "jpg"
+                },
+                "logoImage": {
+                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "png"
+                },
+                "type": "show",
+                "runtime": 504,
+                "genres": [
+                    { "id": 1, "name": "drama" }
+                ]
+            },
+            "episodeCount": 6
+        },
+        {
+            "summary": {
+                "id": 10
+            },
+            "jawSummary": {
+                "backgroundImage": {
+                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "jpg"
+                },
+                "logoImage": {
+                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "png"
+                },
+                "type": "show",
+                "runtime": 504,
+                "genres": [
+                    { "id": 1, "name": "drama" }
+                ]
+            },
+            "episodeCount": 6
+        },
+        {
+            "summary": {
+                "id": 11
+            },
+            "jawSummary": {
+                "backgroundImage": {
+                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "jpg"
+                },
+                "logoImage": {
+                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "png"
+                },
+                "type": "show",
+                "runtime": 504,
+                "genres": [
+                    { "id": 1, "name": "drama" }
+                ]
+            },
+            "episodeCount": 6
+        },
+        {
+            "summary": {
+                "id": 12
+            },
+            "jawSummary": {
+                "backgroundImage": {
+                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "jpg"
+                },
+                "logoImage": {
+                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "png"
+                },
+                "type": "show",
+                "runtime": 504,
+                "genres": [
+                    { "id": 1, "name": "drama" }
+                ]
+            },
+            "episodeCount": 6
+        },
+        {
+            "summary": {
+                "id": 13
+            },
+            "jawSummary": {
+                "backgroundImage": {
+                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "jpg"
+                },
+                "logoImage": {
+                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "png"
+                },
+                "type": "show",
+                "runtime": 504,
+                "genres": [
+                    { "id": 1, "name": "drama" }
+                ]
+            },
+            "episodeCount": 6
+        },
+        {
+            "summary": {
+                "id": 14
+            },
+            "jawSummary": {
+                "backgroundImage": {
+                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "jpg"
+                },
+                "logoImage": {
+                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "png"
+                },
+                "type": "show",
+                "runtime": 504,
+                "genres": [
+                    { "id": 1, "name": "drama" }
+                ]
+            },
+            "episodeCount": 6
+        },
+        {
+            "summary": {
+                "id": 15
+            },
+            "jawSummary": {
+                "backgroundImage": {
+                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "jpg"
+                },
+                "logoImage": {
+                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "png"
+                },
+                "type": "show",
+                "runtime": 504,
+                "genres": [
+                    { "id": 1, "name": "drama" }
+                ]
+            },
+            "episodeCount": 6
+        },
+        {
+            "summary": {
+                "id": 16
+            },
+            "jawSummary": {
+                "backgroundImage": {
+                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "jpg"
+                },
+                "logoImage": {
+                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "png"
+                },
+                "type": "show",
+                "runtime": 504,
+                "genres": [
+                    { "id": 1, "name": "drama" }
+                ]
+            },
+            "episodeCount": 6
+        },
+        {
+            "summary": {
+                "id": 17
+            },
+            "jawSummary": {
+                "backgroundImage": {
+                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "jpg"
+                },
+                "logoImage": {
+                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "png"
+                },
+                "type": "show",
+                "runtime": 504,
+                "genres": [
+                    { "id": 1, "name": "drama" }
+                ]
+            },
+            "episodeCount": 6
+        },
+        {
+            "summary": {
+                "id": 18
+            },
+            "jawSummary": {
+                "backgroundImage": {
+                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "jpg"
+                },
+                "logoImage": {
+                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
+                    "width": 200,
+                    "height": 200,
+                    "extension": "png"
+                },
+                "type": "show",
+                "runtime": 504,
+                "genres": [
+                    { "id": 1, "name": "drama" }
+                ]
+            },
+            "episodeCount": 6
+        }
+    ]
+}
