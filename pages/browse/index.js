@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import axios from "axios";
 import Users from "@/components/Users";
 import Modal from "@/components/Modal";
 import logoImg from "../../public/assets/logoN.png";
@@ -15,13 +16,17 @@ import { MdArrowBackIos, MdKeyboardArrowDown } from "react-icons/md";
 import { BsPlusLg } from 'react-icons/bs';
 
 
-const Browse = ({ data }) => {
+const Browse = () => {
 
+  const fakeArray = [0, 0, 0, 0, 0]
+  const [data, setData] = useState([])
   const [slideValue, setSlideValue] = useState([])
   const [display, setDisplay] = useState(false)
-  const [displayModal, setDisplayModal] = useState({displayValue: false, data: {}, similarTitles: []})
+  const [displayModal, setDisplayModal] = useState({ displayValue: false, data: {}, similarTitles: [] })
 
   const slideRefs = useRef([])
+
+
 
 
   const changeBgNavbar = () => {
@@ -29,24 +34,65 @@ const Browse = ({ data }) => {
   }
 
 
+
+  useEffect(() => {
+
+    getDataNetflix()
+
+  }, [])
+
   useEffect(() => {
     let arr = new Array(data.length),
-       arr2 = new Array(data.length)
+      arr2 = new Array(data.length)
 
-    for(let i = 0; i < arr.length; i++){
+    for (let i = 0; i < arr.length; i++) {
       arr[i] = 0;
       arr2[i] = false
     }
 
     setSlideValue(arr)
     slideRefs.current = []
+  }, [data])
 
-    
-  }, [])
-  
+
+  async function getDataNetflix() {
+
+    if (localStorage.getItem('dataNetflix')) {
+      setData(JSON.parse(localStorage.getItem('dataNetflix')))
+    } else {
+
+      /*===================== Options request axios ======================*/
+      const options = {
+        method: 'GET',
+        url: 'https://netflix54.p.rapidapi.com/search/',
+        params: {
+          query: 'action',
+          offset: '0',
+          limit_titles: '50',
+          limit_suggestions: '20',
+          lang: 'en'
+        },
+        headers: {
+          'X-RapidAPI-Key': '5257834396msheeafefe006a2c5bp12a68ejsnd4b10c39547e',
+          'X-RapidAPI-Host': 'netflix54.p.rapidapi.com'
+        }
+      };
+
+      try {
+        const response = axios.request(options);
+        const dataApp = (await response).data
+        localStorage.setItem("dataNetflix", JSON.stringify(dataApp))
+        setData(dataApp)
+
+      } catch (error) {
+        console.error(error);
+      }
+
+    }
+  }
 
   const addToRefs = e => {
-    if(e && !slideRefs.current.includes(e)){
+    if (e && !slideRefs.current.includes(e)) {
       slideRefs.current.push(e)
     }
   }
@@ -59,14 +105,14 @@ const Browse = ({ data }) => {
 
   const handleSlide = (arg, index) => {
 
-    if(arg === "prev"){
-      if(slideValue[index] > 0){
+    if (arg === "prev") {
+      if (slideValue[index] > 0) {
         slideValue[index] -= 100
       }
-    } 
+    }
 
-    if(arg === "next"){
-      if(slideValue[index] !== (data[0].titles.length * 100 / 5)){
+    if (arg === "next") {
+      if (slideValue[index] !== (data.titles.length * 100 / 5)) {
         slideValue[index] += 100
       }
     }
@@ -83,40 +129,40 @@ const Browse = ({ data }) => {
     })
   }
 
-  
+
 
 
   return (
-    <main className="position-relative" style={{overflowX: 'hidden'}}>
+    <main className="position-relative" style={{ overflowX: 'hidden' }}>
       {!display ? <Users handleDisplay={handleDisplay} />
         :
         <section>
           <nav className="d-flex justify-content-between px-5 py-4 fixed-top" style={{ backgroundColor: 'transparent', border: "none" }} >
             <div className="d-flex gap-5 p-0 menu position-relative">
 
-              <Image src={logoImg} width="90" />
+              <Image src={logoImg} width="90" alt="Logo" />
               <div className="menu-small">
                 <span className="menu-small-device">Browse</span>
-              <ul className="align-items-center list-unstyled gap-3">
-                <li>
-                  <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}> Home </Link>
-                </li>
-                <li>
-                  <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}> Series </Link>
-                </li>
-                <li>
-                  <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}> Movies </Link>
-                </li>
-                <li>
-                  <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}>Most watched new releases</Link>
-                </li>
-                <li>
-                  <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}>My list</Link>
-                </li>
-                <li>
-                  <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}>Explore by language</Link>
-                </li>
-              </ul>
+                <ul className="align-items-center list-unstyled gap-3">
+                  <li>
+                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}> Home </Link>
+                  </li>
+                  <li>
+                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}> Series </Link>
+                  </li>
+                  <li>
+                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}> Movies </Link>
+                  </li>
+                  <li>
+                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}>Most watched new releases</Link>
+                  </li>
+                  <li>
+                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}>My list</Link>
+                  </li>
+                  <li>
+                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}>Explore by language</Link>
+                  </li>
+                </ul>
               </div>
             </div>
             <div className="d-flex gap-3 text-white fs-4">
@@ -132,7 +178,7 @@ const Browse = ({ data }) => {
           </nav>
           <div className="position-relative">
             <div className="position-relative" style={{ width: "100%", height: "100vh" }}>
-              <Image src={brandImg} width="900" height="900" alt="picture" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+              <Image src={`${data.titles[10].jawSummary.backgroundImage.url}.${data.titles[10].jawSummary.backgroundImage.extension}`} width="900" height="900" alt="picture" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
               <div className="d-flex justify-content-between align-items-center position-absolute top-0" style={{ width: "100%", height: "100%", background: "rgba(0, 0, 0, .5)" }}>
                 <div className="d-flex flex-column gap-2 text-white px-5 w-lg-50">
                   <span style={{ fontSize: "14px" }}>SÉRIE</span>
@@ -163,8 +209,7 @@ const Browse = ({ data }) => {
             <div className="position-relative">
               <div className="position-absolute start-0 d-flex flex-column w-100 gap-5" style={{ "top": "-10rem", background: "linear-gradient(transparent 5%, rgba(20, 20, 20, 1) 7%)" }}>
 
-                {data && data.map((element, index) => (
-
+                {fakeArray.map((element, index) => (
                   <div className="w-100  px-2 position-relative containerSlide" key={index}>
                     <div
                       className="d-flex align-items-center gap-3 position-relative"
@@ -172,19 +217,20 @@ const Browse = ({ data }) => {
                       style={{ transition: "transform .3s ease-in-out", padding: "0 5%" }}
                     >
                       {
-                        element.titles.map((item) => (
+                        data.titles.map((item) => (
+                          item.jawSummary.backgroundImage.url &&
                           <div
                             key={item.summary.id}
                             role="button"
                             className={`position-relative col-4 col-md-3 col-lg-2 text-danger d-flex flex-column element`}
-                            onClick={() => handleModal(item, element.titles)}
+                            onClick={() => handleModal(item, data.titles)}
                           >
                             <div className="w-100 h-100 element-container position-relative">
                               <div className="d-flex align-items-center justify-content-center position-relative w-100 h-100 overflow-hidden element-img">
-                                <Image src={`${item.jawSummary.backgroundImage.url}.${item.jawSummary.backgroundImage.extension}`} alt="Picture" property="false" width={`${item.jawSummary.backgroundImage.width}`} height={`${item.jawSummary.backgroundImage.height}`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                                <div className="position-absolute px-1" style={{ width: "100%", height: "100%", top: "0", background: "rgba(0, 0, 0, .5)" }}>
-                                  {<Image src={`${item.jawSummary.logoImage.url}.${item.jawSummary.backgroundImage.extension}`} alt="Picture" property="false" width={`${item.jawSummary.logoImage.width}`} height={`${item.jawSummary.logoImage.height}`} style={{ width: "100%", objectFit: "contain" }} />}
-                                </div>
+                                {<Image src={`${item.jawSummary.backgroundImage.url}.${item.jawSummary.backgroundImage.extension}`} alt="Picture" property="false" width={`${item.jawSummary.backgroundImage.width}`} height={`${item.jawSummary.backgroundImage.height}`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />}
+                                {<div className="position-absolute px-1" style={{ width: "100%", height: "100%", bottom: "1rem", background: "rgba(0, 0, 0, .5)" }}>
+                                  {item.jawSummary.logoImage && <Image src={`${item.jawSummary.logoImage.url}.${item.jawSummary.backgroundImage.extension}`} alt="Picture" property="false" width={`${item.jawSummary.logoImage.width}`} height={`${item.jawSummary.logoImage.height}`} style={{ width: "100%", objectFit: "contain" }} />}
+                                </div>}
                               </div>
                               <div className=" position-absolute w-100 px-2 py-2 flex-column gap-4 element-infos">
                                 <div className="d-flex justify-content-between align-items-center px-1 fs-5">
@@ -227,8 +273,8 @@ const Browse = ({ data }) => {
                         ))
                       }
                     </div>
-                    
-                    { (slideValue[index] !== 0) &&  <div
+
+                    {(slideValue[index] !== 0) && <div
                       role="button"
                       className={`position-absolute start-0 top-0 justify-content-center align-items-center px-1 px-md-2 text-white buttonNextPrev`}
                       style={{ background: "rgba(0, 0, 0, .8)", width: "3%", height: "100%", zIndex: "1000" }}
@@ -236,10 +282,10 @@ const Browse = ({ data }) => {
                     >
                       <MdArrowBackIos />
                     </div>}
-                    { ((slideValue[index] !== ((data[0].titles.length * 100 / 6) - 100))) && <div
+                    {((slideValue[index] !== ((data.titles.length * 100 / 6) - 100))) && <div
                       role="button"
                       className={`position-absolute top-0 end-0 justify-content-center align-items-center px-1 px-md-2 text-white buttonNextPrev`}
-                      style={{ background: "rgba(0, 0, 0, .8)", width: "3%", height: "100%", zIndex: "1000"}}
+                      style={{ background: "rgba(0, 0, 0, .8)", width: "3%", height: "100%", zIndex: "1000" }}
                       onClick={() => handleSlide("next", index)}
                     >
                       <MdArrowBackIos style={{ transform: "rotate(180deg)" }} />
@@ -251,50 +297,12 @@ const Browse = ({ data }) => {
             </div>
           </div>
         </section>}
-        { displayModal.displayValue && <Modal dataC={displayModal.data} similarTitles={displayModal.similarTitles} setDisplayValue={setDisplayModal} />
-        }
+      {displayModal.displayValue && <Modal dataC={displayModal.data} similarTitles={displayModal.similarTitles} setDisplayValue={setDisplayModal} />
+      }
     </main>
   );
 };
 
 export default Browse;
 
-export async function getStaticProps() {
 
-  const parametres = ["series", "movies", "kdrama", "anime", "love", "stranger", "'action", "school"]
-  let dataApi = []
-
-  const axios = require('axios');
-
-  /*===================== Options request axios ======================*/
-  parametres.map(item => {
-    const options = {
-      method: 'GET',
-      url: 'https://netflix54.p.rapidapi.com/search/',
-      params: {
-        query: item,
-        offset: '0',
-        limit_titles: '50',
-        limit_suggestions: '20',
-        lang: 'en'
-      },
-      headers: {
-        'X-RapidAPI-Key': '515e041220msh3d2116a9521d37bp1d4434jsnddf311ede0f1',
-        'X-RapidAPI-Host': 'netflix54.p.rapidapi.com'
-      }
-    };
-  
-      try {
-        const response = axios.request(options);
-        dataApi.push(response.data);
-      } catch (error) {
-        console.error(error.message);
-      }
-  }) 
-
-  return {
-    props: {
-      data: dataApi,
-    },
-  };
-}
