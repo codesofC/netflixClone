@@ -10,7 +10,7 @@ const Signup = ({ links }) => {
   return (
     <main className="row justify-content-center" style={{width: '100%', padding: '0', margin: '0'}}>
       <NavTwo type="Sair" />
-      <section className="col-12 col-sm-8 col-lg-6 col-xl-3 d-flex flex-column gap-3 align-items-center justify-content-center" style={{height: '60vh'}}>
+      <section className="col-12 col-sm-8 col-lg-6 col-xl-3 d-flex flex-column gap-3 align-items-center justify-content-center my-5" style={{minHeight: '60vh'}}>
         <div className="d-flex flex-column gap-3 align-items-center">
           <span className="px-2 py-1 border-danger rounded-circle fs-5 text-danger" style={{"border": "3px solid red"}}> <AiOutlineCheck /> </span>
           <span style={{fontSize: '12px'}}>PASSO 1 DE 3</span>

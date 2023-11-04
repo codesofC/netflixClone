@@ -1,53 +1,116 @@
 import { useState, useRef, useEffect } from "react";
+import { useRouter } from "next/router";
 import Image from "next/image";
 import Link from "next/link";
 import Users from "@/components/Users";
 import Modal from "@/components/Modal";
 import logoImg from "../../public/assets/logoN.png";
-import brandImg from "../../public/assets/myname.jpg"
-import profil from "../../public/assets/witcher.jpg";
+import profil from "../../public/assets/icon-profil.jpg";
 import { BiSearch } from "react-icons/bi";
 import { IoMdNotificationsOutline } from "react-icons/io";
 import { TiArrowSortedDown } from "react-icons/ti";
 import { FaPlay } from "react-icons/fa";
 import { AiOutlineInfoCircle, AiOutlineReload, AiOutlineLike } from "react-icons/ai";
 import { MdArrowBackIos, MdKeyboardArrowDown } from "react-icons/md";
-import { BsPlusLg } from 'react-icons/bs';
+import { BsPlusLg, BsCheckLg } from 'react-icons/bs';
+import { useStore } from "@/zustand/strore";
 
 
 const Browse = ({ data }) => {
 
+  const [changeNavbar, setChangeNavbar] = useState(false)
   const [slideValue, setSlideValue] = useState([])
   const [display, setDisplay] = useState(false)
-  const [displayModal, setDisplayModal] = useState({displayValue: false, data: {}, similarTitles: []})
+  const [displayBtnNext, setDisplayBtnNext] = useState([])
+  const [displayModal, setDisplayModal] = useState({ displayValue: false, data: {}, similarTitles: [] })
+  const [indexBrandImg, setIndexBrandImg] = useState({ i1: 0, i2: 0 })
+
 
   const slideRefs = useRef([])
+  const nextBtnRef = useRef([])
+  const prevBtnRef = useRef([])
 
+  const videoRef = useRef()
 
-  const changeBgNavbar = () => {
-    setBgNavbar(false)
-  }
+  const router = useRouter()
+
+  let timeOut;
+
+  //My list using zustand
+  const { list, addOrRemoveToList } = useStore((state) => state)
 
 
   useEffect(() => {
     let arr = new Array(data.length),
-       arr2 = new Array(data.length)
+      arr2 = new Array(data.length)
 
-    for(let i = 0; i < arr.length; i++){
+    for (let i = 0; i < arr.length; i++) {
       arr[i] = 0;
-      arr2[i] = false
+      arr2[i] = true
     }
 
     setSlideValue(arr)
+    setDisplayBtnNext(arr2)
     slideRefs.current = []
 
-    
+    const index1 = Math.trunc(Math.random() * data.length)
+    const index2 = Math.trunc(Math.random() * data[index1].length)
+
+    setIndexBrandImg({
+      i1: index1,
+      i2: index2
+    })
+
+    window.addEventListener("scroll", changeNavbarFunc)
+
+    return () => {
+      clearTimeout(timeOut)
+      window.removeEventListener("scroll", changeNavbarFunc)
+    }
+
   }, [])
-  
+
+  useEffect(() => {
+    if(display){
+      if (displayModal.displayValue) {
+        videoRef.current.pause()
+      } else {
+        playFunc()
+      }
+    }
+  }, [displayModal.displayValue, display])
+
+  async function playFunc() {
+    try {
+      await videoRef.current.play()
+    } catch (err) {
+      console.log("Error to autoplay video")
+    }
+  }
+
+  const changeNavbarFunc = () => {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+      setChangeNavbar(true)
+    } else {
+      setChangeNavbar(false)
+    }
+  }
 
   const addToRefs = e => {
-    if(e && !slideRefs.current.includes(e)){
+    if (e && !slideRefs.current.includes(e)) {
       slideRefs.current.push(e)
+    }
+  }
+
+  const addNextBtnRefs = e => {
+    if (e && !nextBtnRef.current.includes(e)) {
+      nextBtnRef.current.push(e)
+    }
+  }
+
+  const addPreviousBtnRefs = e => {
+    if (e && !prevBtnRef.current.includes(e)) {
+      prevBtnRef.current.push(e)
     }
   }
 
@@ -57,20 +120,23 @@ const Browse = ({ data }) => {
 
 
 
-  const handleSlide = (arg, index) => {
+  const handleSlide = (arg, index, e) => {
 
-    if(arg === "prev"){
-      if(slideValue[index] > 0){
+    if (arg === "prev") {
+      if (slideValue[index] > 0) {
         slideValue[index] -= 100
       }
-    } 
+    }
 
-    if(arg === "next"){
-      if(slideValue[index] !== (data[0].titles.length * 100 / 5)){
+    if (arg === "next") {
+      if ((slideValue[index] !== ((parseInt(data[index].length / 5) * 100) - 100))) {
         slideValue[index] += 100
       }
     }
     slideRefs.current[index].style.transform = "translateX(-" + slideValue[index] + "%)";
+    if (!(slideValue[index] !== ((parseInt(data[index].length / 4) * 100) - 100))) {
+      displayBtnNext[index] = false
+    }
   }
 
   const handleModal = (arg, element) => {
@@ -83,46 +149,51 @@ const Browse = ({ data }) => {
     })
   }
 
-  
+  const toMyList = (id) => {
+    const findObject = list.findIndex(obj => obj.jawSummary.id === id)
+
+    return findObject
+  }
+
 
 
   return (
-    <main className="position-relative" style={{overflowX: 'hidden'}}>
+    <div className="position-relative h-100" style={{ overflowX: "hidden", background: "rgba(20, 20, 20)" }}>
       {!display ? <Users handleDisplay={handleDisplay} />
         :
         <section>
-          <nav className="d-flex justify-content-between px-5 py-4 fixed-top" style={{ backgroundColor: 'transparent', border: "none" }} >
+          <nav className="d-flex justify-content-between px-5 py-4 gap-2 position-fixed w-100 overflow-x-hidden" style={{ backgroundColor: `${!changeNavbar ? 'transparent' : 'black'}`, top: 0, left: 0, zIndex: 1 }} >
             <div className="d-flex gap-5 p-0 menu position-relative">
 
-              <Image src={logoImg} width="90" />
+              <Image src={logoImg} width="90" alt="Picture" />
               <div className="menu-small">
                 <span className="menu-small-device">Browse</span>
-              <ul className="align-items-center list-unstyled gap-3">
-                <li>
-                  <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}> Home </Link>
-                </li>
-                <li>
-                  <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}> Series </Link>
-                </li>
-                <li>
-                  <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}> Movies </Link>
-                </li>
-                <li>
-                  <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}>Most watched new releases</Link>
-                </li>
-                <li>
-                  <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}>My list</Link>
-                </li>
-                <li>
-                  <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}>Explore by language</Link>
-                </li>
-              </ul>
+                <ul className="align-items-center list-unstyled gap-3">
+                  <li>
+                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}> Home </Link>
+                  </li>
+                  <li>
+                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}> Series </Link>
+                  </li>
+                  <li>
+                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}> Movies </Link>
+                  </li>
+                  <li>
+                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}>Most watched new releases</Link>
+                  </li>
+                  <li>
+                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}>My list</Link>
+                  </li>
+                  <li>
+                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}>Explore by language</Link>
+                  </li>
+                </ul>
               </div>
             </div>
-            <div className="d-flex gap-3 text-white fs-4">
+            <div className="d-flex gap-2 gap-md-3 text-white fs-5">
               <span role="button"> <BiSearch /> </span>
               <span role="button"> <IoMdNotificationsOutline /> </span>
-              <div role="button" className="d-flex gap-3 profilMenu">
+              <div role="button" className="gap-3 profilMenu">
                 <div style={{ "width": "25px", "height": "25px" }}>
                   <Image src={profil} with="25" height="25" alt="Profil" style={{ "objectFit": "contain" }} />
                 </div>
@@ -131,20 +202,21 @@ const Browse = ({ data }) => {
             </div>
           </nav>
           <div className="position-relative">
-            <div className="position-relative" style={{ width: "100%", height: "100vh" }}>
-              <Image src={brandImg} width="900" height="900" alt="picture" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-              <div className="d-flex justify-content-between align-items-center position-absolute top-0" style={{ width: "100%", height: "100%", background: "rgba(0, 0, 0, .5)" }}>
-                <div className="d-flex flex-column gap-2 text-white px-5 w-lg-50">
-                  <span style={{ fontSize: "14px" }}>SÉRIE</span>
-                  <span className="fs-1" style={{ fontWeight: "600" }}>MY NAME</span>
-                  <p className="fs-6 col-12 col-md-9 col-lg-6 col-xl-4">
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Sit aperiam alias asperiores illo vel illum ullam recusandae unde atque
-                    nesciunt consequatur, modi delectus dolorem temporibus.
+            <div className="position-relative videoTag" style={{ width: "100%" }}>
+              {/*<Image src={`${data[indexBrandImg.i1][indexBrandImg.i2].jawSummary.backgroundImage.url}.${data[indexBrandImg.i1][indexBrandImg.i2].jawSummary.backgroundImage.extension}`} width="1200" height="1000" alt="picture" style={{ width: "100%", height: "100%", objectFit: "cover" }} />*/}
+              <video autoPlay muted loop width="1000" height="1000" ref={videoRef} poster={`${data[indexBrandImg.i1][indexBrandImg.i2].jawSummary.backgroundImage.url}.${data[indexBrandImg.i1][indexBrandImg.i2].jawSummary.backgroundImage.extension}`} >
+                <source src="/vide.mp4" type="video/mp4" />
+              </video>
+              <div className="d-flex justify-content-between align-items-center position-absolute top-0 description">
+                <div className="d-flex flex-column gap-1 text-white px-5 w-lg-50 text-description">
+                  <span style={{ fontSize: "14px" }}>{data[indexBrandImg.i1][indexBrandImg.i2].jawSummary.type.toUpperCase()}</span>
+                  <span className="fs-1" style={{ fontWeight: "600" }}>{data[indexBrandImg.i1][indexBrandImg.i2].jawSummary.title}</span>
+                  <p className="col-12 col-md-9 col-lg-6 col-xl-4">
+                    {data[indexBrandImg.i1][indexBrandImg.i2].jawSummary.synopsis}
                   </p>
                   <p className="d-flex gap-5 mt-4">
-                    <span role="button" className="bg-white text-black px-4 py-1 rounded" style={{ fontSize: "15px" }}> <FaPlay /> Play </span>
-                    <span role="button" className="bg-dark text-white rounded px-4 py-1" style={{ fontSize: "15px" }}> <AiOutlineInfoCircle /> More infos </span>
+                    <span role="button" className="bg-white d-flex align-items-center gap-2 text-black px-2 px-md-4 py-1 rounded" style={{ fontSize: "14px" }} onClick={() => router.push(`/watch/${data[indexBrandImg.i1][indexBrandImg.i2].jawSummary.id}`)}> <FaPlay /> Play </span>
+                    <span role="button" className="bg-dark d-flex align-items-center gap-2 text-white rounded px-2 px-md-4 py-1" style={{ fontSize: "14px" }} onClick={() => handleModal(data[indexBrandImg.i1][indexBrandImg.i2], data[indexBrandImg.i1])}> <AiOutlineInfoCircle /> More infos </span>
                   </p>
                 </div>
                 <div className="d-flex align-items-center justify-content-center gap-2 gap-md-3 text-white fs-6">
@@ -160,37 +232,147 @@ const Browse = ({ data }) => {
 
 
 
-            <div className="position-relative">
-              <div className="position-absolute start-0 d-flex flex-column w-100 gap-5" style={{ "top": "-10rem", background: "linear-gradient(transparent 5%, rgba(20, 20, 20, 1) 7%)" }}>
+            <div className="position-relative pb-5">
+              <div className="position-relative d-flex flex-column w-100 gap-5 pt-3 pb-5 grand-container">
+
 
                 {data && data.map((element, index) => (
 
-                  <div className="w-100  px-2 position-relative containerSlide" key={index}>
+                  <div className="w-100 position-relative containerSlide" key={index}>
+                    <h1 className="fs-4 fw-bold text-white px-4"> Action movies and series </h1>
+                    <div className="position-relative">
+
+                      <div
+                        className="d-flex align-items-center gap-3 position-relative"
+                        ref={addToRefs}
+                        style={{ transition: "transform .3s ease-in-out", padding: "0 5%" }}
+                      >
+                        {
+                          element.map((item) => (
+                            <div
+                              key={item.jawSummary.id}
+                              className={`position-relative col-5 col-sm-4 col-md-3 col-lg-2 text-danger d-flex flex-column element`}
+                            >
+                              <div className="w-100 h-100 element-container position-relative">
+                                <div
+                                  role="button"
+                                  className="d-flex align-items-center justify-content-center position-relative w-100 h-100 overflow-hidden element-img"
+                                  onClick={() => handleModal(item, element)}
+                                >
+                                  <Image src={`${item.jawSummary.backgroundImage?.url}.${item.jawSummary.backgroundImage?.extension}`} alt="Picture" property="false" width={`${item.jawSummary.backgroundImage?.width}`} height={`${item.jawSummary.backgroundImage?.height}`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                                  <div className="position-absolute px-1" style={{ width: "100%", height: "100%", top: "0", background: "rgba(0, 0, 0, .5)" }}>
+                                    {item.jawSummary.logoImage && <Image src={`${item.jawSummary?.logoImage?.url}.${item.jawSummary?.logoImage?.extension}`} alt="Picture" property="false" width={`${item.jawSummary?.logoImage?.width}`} height={`${item.jawSummary?.logoImage?.height}`} style={{ width: "100%", height: "100%", objectFit: "contain" }} />}
+                                  </div>
+                                </div>
+                                <div className=" position-absolute w-100 py-2 flex-column gap-4 element-infos">
+                                  <div className="d-flex justify-content-between align-items-center px-1 icon-element">
+                                    <div className="d-flex align-items-center gap-1 gap-md-2">
+                                      <span
+                                        role="button"
+                                        className="p-1 bg-white rounded-circle text-black d-flex align-items-center justify-content-center"
+                                        onClick={() => router.push(`/watch/${item.jawSummary.id}`)}
+                                      >
+                                        <FaPlay />
+                                      </span>
+                                      <span
+                                        role="button"
+                                        className="p-1 border border-white rounded-circle text-white d-flex align-items-center justify-content-center"
+                                        onClick={() => addOrRemoveToList(item)}
+                                      > { toMyList(item.jawSummary.id) !== -1 ? <BsCheckLg /> : <BsPlusLg />} </span>
+                                      <span role="button" className="p-1 border border-white rounded-circle text-white d-flex align-items-center justify-content-center"> <AiOutlineLike /> </span>
+                                    </div>
+                                    <span role="button" className="p-1 border border-white rounded-circle text-white d-flex align-items-center justify-content-center" onClick={() => handleModal(item, element)}> <MdKeyboardArrowDown /> </span>
+                                  </div>
+                                  <div className="d-flex align-items-center gap-3 px-1">
+                                    <span className="p-1 bg-danger text-white rounded" style={{ fontSize: "10px" }}> A14</span>
+                                    {
+                                      item.jawSummary.type === 'show' ? <span style={{ color: "#969695" }} className="movieOrSerie">
+                                        {item.jawSummary?.episodeCount ? item.jawSummary?.episodeCount : 'x'} episodes
+                                      </span> : (item.jawSummary.type === 'movie' ? <span style={{ color: "#969695" }} className='movieOrSerie'>
+                                        {Math.trunc(item.jawSummary.runtime / 3600)} h {Math.trunc((item.jawSummary.runtime % 3600) / 60)} min
+                                      </span> : '')
+                                    }
+                                  </div>
+                                  <div className="d-flex align-items-center flex-wrap gap-2">
+                                    {
+                                      item.jawSummary.genres.map(genre => (
+                                        <div className="d-flex align-items-center justify-content-center gap-1"  key={genre.id}>
+                                          <span className="text-white text-gender">
+                                            {genre.name}
+                                          </span>
+                                          {
+                                            genre.id !== item.jawSummary.genres[item.jawSummary.genres.length - 1].id ? (
+                                              <span className="rounded-circle" style={{ width: "5px", height: "5px", background: "gray" }}></span>
+                                            ) : ''
+                                          }
+                                        </div>
+                                      ))
+                                    }
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          ))
+                        }
+                      </div>
+
+                      {<div
+                        role="button"
+                        className={`position-absolute start-0 top-0 justify-content-center align-items-center px-1 px-md-2 text-white buttonNextPrev active`}
+                        onClick={() => handleSlide("prev", index)}
+                        ref={addPreviousBtnRefs}
+                      >
+                        <MdArrowBackIos />
+                      </div>}
+                      {<div
+                        role="button"
+                        className={`position-absolute top-0 end-0 justify-content-center align-items-center px-1 px-md-2 text-white buttonNextPrev ${displayBtnNext[index] ? 'active' : ''}`}
+                        onClick={(e) => handleSlide("next", index, e)}
+                        ref={addNextBtnRefs}
+                      >
+                        <MdArrowBackIos style={{ transform: "rotate(180deg)" }} />
+                      </div>}
+
+                    </div>
+                  </div>
+                ))
+                }
+
+                { /* Add my list container */}
+                {
+                  list.length > 0 && (<div className="w-100 px-2 position-relative containerSlide">
+                    <h1 className="fs-4 fw-bold text-white px-2"> My List </h1>
                     <div
                       className="d-flex align-items-center gap-3 position-relative"
                       ref={addToRefs}
                       style={{ transition: "transform .3s ease-in-out", padding: "0 5%" }}
                     >
                       {
-                        element.titles.map((item) => (
+                        list.map((item) => (
                           <div
-                            key={item.summary.id}
-                            role="button"
+                            key={item.jawSummary.id}
                             className={`position-relative col-4 col-md-3 col-lg-2 text-danger d-flex flex-column element`}
-                            onClick={() => handleModal(item, element.titles)}
                           >
                             <div className="w-100 h-100 element-container position-relative">
-                              <div className="d-flex align-items-center justify-content-center position-relative w-100 h-100 overflow-hidden element-img">
-                                <Image src={`${item.jawSummary.backgroundImage.url}.${item.jawSummary.backgroundImage.extension}`} alt="Picture" property="false" width={`${item.jawSummary.backgroundImage.width}`} height={`${item.jawSummary.backgroundImage.height}`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                              <div
+                                role="button"
+                                className="d-flex align-items-center justify-content-center position-relative w-100 h-100 overflow-hidden element-img"
+                                onClick={() => handleModal(item, data[0])}
+                              >
+                                <Image src={`${item.jawSummary.backgroundImage?.url}.${item.jawSummary.backgroundImage?.extension}`} alt="Picture" property="false" width={`${item.jawSummary.backgroundImage?.width}`} height={`${item.jawSummary.backgroundImage?.height}`} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                                 <div className="position-absolute px-1" style={{ width: "100%", height: "100%", top: "0", background: "rgba(0, 0, 0, .5)" }}>
-                                  {<Image src={`${item.jawSummary.logoImage.url}.${item.jawSummary.backgroundImage.extension}`} alt="Picture" property="false" width={`${item.jawSummary.logoImage.width}`} height={`${item.jawSummary.logoImage.height}`} style={{ width: "100%", objectFit: "contain" }} />}
+                                  {item.jawSummary.logoImage && <Image src={`${item.jawSummary?.logoImage?.url}.${item.jawSummary?.logoImage?.extension}`} alt="Picture" property="false" width={`${item.jawSummary?.logoImage?.width}`} height={`${item.jawSummary?.logoImage?.height}`} style={{ width: "100%", height: "100%", objectFit: "contain" }} />}
                                 </div>
                               </div>
                               <div className=" position-absolute w-100 px-2 py-2 flex-column gap-4 element-infos">
-                                <div className="d-flex justify-content-between align-items-center px-1 fs-5">
+                                <div className="d-flex justify-content-between align-items-center px-1 icon-elemeeent">
                                   <div className="d-flex align-items-center gap-1 gap-md-2">
-                                    <span role="button" className="p-1 bg-white rounded-circle text-black d-flex align-items-center justify-content-center"> <FaPlay /> </span>
-                                    <span role="button" className="p-1 border border-white rounded-circle text-white d-flex align-items-center justify-content-center"> <BsPlusLg /> </span>
+                                    <span role="button" className="p-1 bg-white rounded-circle text-black d-flex align-items-center justify-content-center" onClick={() => router.push(`/watch/${item.jawSummary.id}`)}> <FaPlay /> </span>
+                                    <span
+                                      role="button"
+                                      className="p-1 border border-white rounded-circle text-white d-flex align-items-center justify-content-center"
+                                      onClick={() => addOrRemoveToList(item)}
+                                    > { toMyList(item.jawSummary.id) !== -1 ? <BsCheckLg /> : <BsPlusLg /> } </span>
                                     <span role="button" className="p-1 border border-white rounded-circle text-white d-flex align-items-center justify-content-center"> <AiOutlineLike /> </span>
                                   </div>
                                   <span role="button" className="p-1 border border-white rounded-circle text-white d-flex align-items-center justify-content-center"> <MdKeyboardArrowDown /> </span>
@@ -199,7 +381,7 @@ const Browse = ({ data }) => {
                                   <span className="p-1 bg-danger text-white rounded" style={{ fontSize: "12px" }}> A14</span>
                                   {
                                     item.jawSummary.type === 'show' ? <span style={{ color: "#969695" }} className="movieOrSerie">
-                                      {item.episodeCount} episodes
+                                      {item.jawSummary?.episodeCount ? item.jawSummary?.episodeCount : 'x'} episodes
                                     </span> : (item.jawSummary.type === 'movie' ? <span style={{ color: "#969695" }} className='movieOrSerie'>
                                       {Math.trunc(item.jawSummary.runtime / 3600)} h {Math.trunc((item.jawSummary.runtime % 3600) / 60)} min
                                     </span> : '')
@@ -209,7 +391,7 @@ const Browse = ({ data }) => {
                                   {
                                     item.jawSummary.genres.map(genre => (
                                       <div className="d-flex align-items-center justify-content-center gap-1">
-                                        <span key={genre.id} className="text-white" style={{ fontSize: "13px" }}>
+                                        <span key={genre.id} className="text-white text-gender">
                                           {genre.name}
                                         </span>
                                         {
@@ -227,33 +409,16 @@ const Browse = ({ data }) => {
                         ))
                       }
                     </div>
-                    
-                    { (slideValue[index] !== 0) &&  <div
-                      role="button"
-                      className={`position-absolute start-0 top-0 justify-content-center align-items-center px-1 px-md-2 text-white buttonNextPrev`}
-                      style={{ background: "rgba(0, 0, 0, .8)", width: "3%", height: "100%", zIndex: "1000" }}
-                      onClick={() => handleSlide("prev", index)}
-                    >
-                      <MdArrowBackIos />
-                    </div>}
-                    { ((slideValue[index] !== ((data[0].titles.length * 100 / 6) - 100))) && <div
-                      role="button"
-                      className={`position-absolute top-0 end-0 justify-content-center align-items-center px-1 px-md-2 text-white buttonNextPrev`}
-                      style={{ background: "rgba(0, 0, 0, .8)", width: "3%", height: "100%", zIndex: "1000"}}
-                      onClick={() => handleSlide("next", index)}
-                    >
-                      <MdArrowBackIos style={{ transform: "rotate(180deg)" }} />
-                    </div>}
-                  </div>
-                ))
+                  </div>)
                 }
+
               </div>
             </div>
           </div>
         </section>}
-        { displayModal.displayValue && <Modal dataC={displayModal.data} similarTitles={displayModal.similarTitles} setDisplayValue={setDisplayModal} />
-        }
-    </main>
+      {displayModal.displayValue && <Modal dataC={displayModal.data} similarTitles={displayModal.similarTitles} setDisplayValue={setDisplayModal} toMyList={toMyList} />
+      }
+    </div>
   );
 };
 
@@ -261,40 +426,17 @@ export default Browse;
 
 export async function getStaticProps() {
 
-  const parametres = ["series", "movies", "kdrama", "anime", "love", "stranger", "'action", "school"]
+  const data = await import("../api/fake.json")
   let dataApi = []
 
-  const axios = require('axios');
+  for (let i = 0; i < 1; i++) {
+    dataApi.push(data.titles)
+  }
 
-  /*===================== Options request axios ======================*/
-  parametres.map(item => {
-    const options = {
-      method: 'GET',
-      url: 'https://netflix54.p.rapidapi.com/search/',
-      params: {
-        query: item,
-        offset: '0',
-        limit_titles: '50',
-        limit_suggestions: '20',
-        lang: 'en'
-      },
-      headers: {
-        'X-RapidAPI-Key': '515e041220msh3d2116a9521d37bp1d4434jsnddf311ede0f1',
-        'X-RapidAPI-Host': 'netflix54.p.rapidapi.com'
-      }
-    };
-  
-      try {
-        const response = axios.request(options);
-        dataApi.push(response.data);
-      } catch (error) {
-        console.error(error.message);
-      }
-  }) 
 
   return {
     props: {
-      data: dataApi,
+      data: dataApi
     },
   };
 }

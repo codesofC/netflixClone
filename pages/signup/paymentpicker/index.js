@@ -19,8 +19,8 @@ const PaymentPicker = ({ links }) => {
     >
       <NavTwo type="Sair" />
       <section
-        className="col-12 col-sm-8 col-lg-8 col-xl-4 d-flex flex-column gap-3 align-items-center justify-content-center"
-        style={{ height: "60vh" }}
+        className="col-12 col-sm-8 col-lg-8 col-xl-4 d-flex flex-column gap-3 align-items-center justify-content-center my-5"
+        style={{ minHeight: "60vh" }}
       >
         <div className="d-flex flex-column gap-5 align-items-center">
           <span

@@ -44,7 +44,7 @@ const RegForm = ({ links }) => {
     >
       <NavTwo type="Entrar" />
       <section
-        className="col-12 col-sm-8 col-lg-6 col-xl-3 d-flex flex-column gap-3 justify-content-center"
+        className="col-12 col-sm-8 col-lg-6 col-xl-3 d-flex flex-column gap-3 justify-content-center my-5"
         style={{ height: "60vh" }}
       >
         <div className="px-5">

@@ -1,454 +1,732 @@
 {
     "titles": [
         {
-            "summary": {
-                "id": 1
-            },
             "jawSummary": {
+                "id": 70269479,
                 "backgroundImage": {
-                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "jpg"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABTiTePglpx6hqIqGC7pNmxSGy5gltJJjox2aK9rBlkDPY_xYXZXUhngEVe1G7bW3vbfpnm7EzuMSyVEWgNQ5bvzxQZkG519fQRf2.webp?r=ddc",
+                    "width": 848,
+                    "height": 477,
+                    "extension": "webp"
                 },
                 "logoImage": {
-                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "png"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABaHmCQPDpgsqGKbIfyZYz0LLmgQGFXnb4eQsKfRlIl2E53udkdP6brvkZ-65AZqTHvP5z57-f3wDsbmZcd4udSpVKcSG2Qq9CprZc1AbegE4n3nw18jq1-6jpwCE4DzvUTTIzCFyy2oHK5-oxuKRREZfLVvCnJ_hVFSrf2mbm1O2jV234Lz0.webp?r=fe1",
+                    "width": 625,
+                    "height": 250,
+                    "extension": "webp"
                 },
-                "type": "show",
-                "runtime": 504,
+                "type": "movie",
+                "runtime": 6047,
                 "genres": [
-                    { "id": 1, "name": "drama" }
-                ]
-            },
-            "episodeCount": 6
+                    { "id": 1, "name": "Martial Arts Movies" },
+                    {"id": 2, "name": "Based on Books"},
+                    {"id": 3, "name": "Action & Adventure"}
+                ],
+                "tags": [
+                    { "id": 1, "name": "Exciting"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Michelle Yeoh"},
+                    { "id": 2, "name": "Donnie Yen"},
+                    { "id": 3, "name": "Harry Shum Jr."},
+                    { "id": 4, "name": "Natasha Liu Bordizzo"},
+                    { "id": 5, "name": "Jason Scott Lee"}
+                ],
+                "synopsis":"Renowned warrior Yu Shu-Lien comes out of retirement to keep the legendary Green Destiny sword away from villainous warlord Hades Dai.",
+                "title": "Crouching Tiger, Hidden Dragon: Sword of Destiny",
+                "quality":"HD"
+            }
         },
         {
-            "summary": {
-                "id": 2
-            },
             "jawSummary": {
+                "id": 80098200,
                 "backgroundImage": {
-                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "jpg"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABaQvd0tPVJkzI9enDPZivFQkRrOXJtAdoKfN3xggM5uwFVdAQXc9GoG3IB_LwFirirAOZ9v577PubeBMbh3-j8J7jEQ8r3NPazcF.webp?r=72c",
+                    "width": 848,
+                    "height": 477,
+                    "extension": "webp"
                 },
                 "logoImage": {
-                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "png"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABYK9M13JDtAvNIBcfmAM3-FAGx6lI9J7dwcP0h35W-y22ySRXRuj-l00TYY4TIP1OgF7byK4NcmRElMVRouRYRNNJ_O8ZW_pYcety8-yxtB0viV9wd58YEf8VKMnh4Zs0GX0tLR4zC9ve3ZBBTK9j-mHvK5xL_ZaT5yhz21nYJSRLJp8bfL6.webp?r=aee",
+                    "width": 625,
+                    "height": 250,
+                    "extension": "webp"
                 },
-                "type": "show",
-                "runtime": 504,
+                "type": "movie",
+                "runtime": 5972,
                 "genres": [
-                    { "id": 1, "name": "drama" }
-                ]
-            },
-            "episodeCount": 6
+                    { "id": 1, "name": "Brazilian" },
+                    { "id": 2, "name": "Westerns"},
+                    { "id": 3, "name": "Action & Adventure"}
+                ],
+                "tags": [
+                    { "id": 1, "name": "Violent"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Diogo Morgado"},
+                    { "id": 2, "name": "Étienne Chicot"},
+                    { "id": 3, "name": "Deto Montenegro"},
+                    { "id": 4, "name": "Jonas Leite"},
+                    { "id": 5, "name": "Paulo Gorgulho"}
+                ],
+                "synopsis":"In lawless badlands, reclusive Cabeleira sets out to discover the fate of his gunman father and grows to be a feared assassin himself.",
+                "title":"The Killer",
+                "quality": "HD"
+            }
         },
         {
-            "summary": {
-                "id": 3
-            },
             "jawSummary": {
+                "id": 80192187,
                 "backgroundImage": {
-                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "jpg"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABXApJwN2Ag0EGunwjhCL0j005Syng7wr-OrbRzFGXnSrEw5_n2ikHxSum9MDvHzfhPpuku5EtBuu9l6GQEd3GEDg-VnuLDsPzwUP.webp?r=f9d",
+                    "width": 848,
+                    "height": 477,
+                    "extension": "webp"
                 },
                 "logoImage": {
-                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "png"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABcfvbKDXsmYTEnbNIrKwFjwbCtYnbFY4Trz3U7MPwaCLL18ynShhe65Zo6FR549Dv3_vq1rpEn4oTKOMcruefjvElj1lzrINk80XH-pPSBqMHJyNCkjebNbxV-k5ixsipqPjPWcyszPocMzO945n7V4FStM7zkZTcIYXXfrZbVCm39yEqDih.webp?r=673",
+                    "width": 625,
+                    "height": 250,
+                    "extension": "webp"
                 },
-                "type": "show",
-                "runtime": 504,
+                "type": "movie",
+                "runtime": 7556,
                 "genres": [
-                    { "id": 1, "name": "drama" }
-                ]
-            },
-            "episodeCount": 6
+                    { "id": 1, "name": "Action & Adventure" }
+                ],
+                "tags": [
+                    { "id": 1, "name": "Suspenseful"},
+                    { "id": 2, "name": "Exciting"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Ben Affleck"},
+                    { "id": 2, "name": "Oscar Isaac"},
+                    { "id": 3, "name": "Charlie Hunnam"},
+                    { "id": 4, "name": "Pedro Pascal"},
+                    { "id": 5, "name": "Garrett Hedlund"}
+                ],
+                "synopsis":"Loyalties are tested when five former special forces operatives reunite to steal a drug lord's fortune, unleashing a chain of unintended consequences.",
+                "title":"Triple Frontier",
+                "quality": "HD"
+            }
         },
         {
-            "summary": {
-                "id": 4
-            },
             "jawSummary": {
+                "id": 80198975,
                 "backgroundImage": {
-                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "jpg"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABbdKwOsByMAgEEQ122BjYyrzKCz880NsoUNqTtv5ka2lWDlaX5NK63jKF6QwUUb27JASZn5iNG9QVGNjutb-W85vT8AJo_O_TiMg.webp?r=63a",
+                    "width": 848,
+                    "height": 477,
+                    "extension": "webp"
                 },
                 "logoImage": {
-                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "png"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABZsZr946D3CN5CKq-7SY-xCWpJKP7jc7HKp3qX5xYnPkg1ci8NKHQdRs8ROBnx3nuU3rg5XLp2ZV9wwmZOMbwdMvufX_TFQjhNqeLOF2nuVK8Ma_50QzVfxP_oIuih65hKyQJ4IsRkR_1xd17SVonPA4vLt2ICFRbUoCqqYcbiDDQ94FyLtZ.webp?r=ae3",
+                    "width": 625,
+                    "height": 250,
+                    "extension": "webp"
                 },
-                "type": "show",
-                "runtime": 504,
+                "type": "movie",
+                "runtime": 8940,
                 "genres": [
-                    { "id": 1, "name": "drama" }
-                ]
-            },
-            "episodeCount": 6
+                    { "id": 1, "name": "Sci-Fi" },
+                    { "id": 2, "name": "Drama"},
+                    { "id": 3, "name": "Independent"}
+                ],
+                "tags": [
+                    { "id": 1, "name": "Gritty"},
+                    { "id": 2, "name": "Suspenseful"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Edgar Ramírez"},
+                    { "id": 2, "name": "Michael Pitt"},
+                    { "id": 3, "name": "Anna Brewster"},
+                    { "id": 4, "name": "Patrick Bergin"},
+                    { "id": 5, "name": "Sharlto Copley"}
+                ],
+                "synopsis":"A bank robber joins a plot to commit one final, historic heist before the government turns on a mind-altering signal that will end all criminal behavior.",
+                "title":"The Last Days of American Crime",
+                "quality":"HD"
+            }
         },
         {
-            "summary": {
-                "id": 5
-            },
             "jawSummary": {
+                "id": 80204451,
                 "backgroundImage": {
-                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
-                    "width": 200,
-                    "height": 200,
+                    "url": "https://cinema10.com.br/upload/featuredImage.php?url=http%3A%2F%2Fcinema10.com.br%2Fupload%2Fnoticias%2F2021-2%2F76620a4d8",
+                    "width": 848,
+                    "height": 477,
                     "extension": "jpg"
                 },
                 "logoImage": {
-                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "png"
+                    "url": "https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABRR7RY5oJb_hqNZJFc5XxOiAWuG9oSQeEkHIljEGbCZArKzgLoC6Z_GFFlHpE5h6M1IMqtipAe2YVPRLye8yp33Ix8oTo6cG-KwC93h2PPhXfULZKasPKqTsRvbrb_IW6oo_ts3W4PQ6wnN-QOT8NClME40-Lp5fKSpskrd26PxGppt8068xHw",
+                    "width": 625,
+                    "height":250,
+                    "extension": "png?r=2ee"
                 },
                 "type": "show",
-                "runtime": 504,
                 "genres": [
-                    { "id": 1, "name": "drama" }
-                ]
-            },
-            "episodeCount": 6
+                    { "id": 1, "name": "Shounen Anime" },
+                    { "id": 2, "name": "Action Anime"},
+                    { "id": 3, "name": "Japanese"},
+                    { "id": 4, "name": "Sports Anime"}
+                ],
+                "tags": [
+                    { "id": 1, "name": "Violent"},
+                    { "id": 2, "name": "Exciting"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Nobunaga Shimazaki"},
+                    { "id": 2, "name": "Akio Otsuka"},
+                    { "id": 3, "name": "Takayuki Sugo"},
+                    { "id": 4, "name": "Bin Shimada"},
+                    { "id": 5, "name": "Rikiya Koyama"}
+                ],
+                "synopsis":"While martial arts champion Baki Hanma trains hard to surpass his legendary father, five violent death row inmates descend upon Tokyo to take him on.",
+                "title":"BAKI",
+                "quality":"HD"
+            }
         },
         {
-            "summary": {
-                "id": 6
-            },
             "jawSummary": {
+                "id": 80207371,
                 "backgroundImage": {
-                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "jpg"
+                    "url": "https://cdn.ome.lt/KZ20LQh-vuro_o9XlxLjkSux1wI=/1200x630/smart/extras/conteudos/close_noomi",
+                    "width": 848,
+                    "height": 477,
+                    "extension": "PNG"
                 },
                 "logoImage": {
-                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "png"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABRHJFjt3HOzOYtZoPZ8niyp2meoxptEwOABs8VlcEaDI0Z9M5XBeJvj9u6N61OLQ2QnIkHESjYdvC8VQk6ocXqWLw0cShvchxWZYyUiFl249RrdN4bnJFfmAD1OXRdwjlZzNLd3_57K5ddCizYWfNZEnmaXmX5kP-iRno8nxJ_Q-ciAcw_Ta.webp?r=a82",
+                    "width": 625,
+                    "height": 250,
+                    "extension": "webp"
                 },
-                "type": "show",
-                "runtime": 504,
+                "type": "movie",
+                "runtime": 5683,
                 "genres": [
-                    { "id": 1, "name": "drama" }
-                ]
-            },
-            "episodeCount": 6
+                    { "id": 1, "name": "British" },
+                    { "id": 2, "name": "Action & Adventure"}
+                ],
+                "tags": [
+                    { "id": 1, "name": "Exciting"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Noomi Rapace"},
+                    { "id": 2, "name": "Sophie Nélisse"},
+                    { "id": 3, "name": "Indira Varma"},
+                    { "id": 4, "name": "George Georgiou"},
+                    { "id": 5, "name": "Christopher Sciueref"}
+                ],
+                "synopsis":"When attackers target the heiress she's protecting, battle-hardened bodyguard Sam scrambles to save her client -- and teach her how to fight back.",
+                "title":"Close",
+                "quality":"HD"
+            }
         },
         {
-            "summary": {
-                "id": 7
-            },
             "jawSummary": {
+                "id": 80210920,
                 "backgroundImage": {
-                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "jpg"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABRjhJdUx1fU57GlhTn54tV8nVqywtR-tfmPVvbXttwdfjkSvr2goolBZPTN6Fx7MeAkA6154E5TO7DTJtbArm5wccrjhIZQHztwO.webp?r=48c",
+                    "width": 848,
+                    "height": 477,
+                    "extension": "webp"
                 },
                 "logoImage": {
-                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "png"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABTRW_5Rcs1N7_6K2qw96xiJQqicbJIca2bw50VNYpuges2pJrzWz_hRWqPnUvN4unfFloilvdrjxOI3zXdiL8EhNr4948iQwQ0mA8hReIUYydYId69zKTtP4UWUbKaa4tZjvXSdyhVpP_Cy3H6lzeZHBZTLxJPfYTgJkNKW9zIhaI0sSbMTZ.webp?r=f5d",
+                    "width": 625,
+                    "height": 250,
+                    "extension": "webp"
                 },
-                "type": "show",
-                "runtime": 504,
+                "type": "movie",
+                "runtime": 7051,
                 "genres": [
-                    { "id": 1, "name": "drama" }
-                ]
-            },
-            "episodeCount": 6
+                    { "id": 1, "name": "Drama" },
+                    { "id": 2, "name": "Action & Adventure"}
+                ],
+                "tags": [
+                    { "id": 1, "name": "Understated"},
+                    { "id": 2, "name": "Gritty"},
+                    { "id": 3, "name": "Suspenseful"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Jennifer Lopez"},
+                    { "id": 2, "name": "Joseph Fiennes"},
+                    { "id": 3, "name": "Gael García"},
+                    { "id": 4, "name": "Lucy Paez"},
+                    { "id": 5, "name": "Omari Hardwick"}
+                ],
+                "synopsis":"A military-trained assassin comes out of hiding to protect the daughter she's never met from ruthless criminals gunning for revenge.",
+                "title":"The Mother",
+                "quality":"HD"
+            }
         },
         {
-            "summary": {
-                "id": 8
-            },
             "jawSummary": {
+                "id": 80216200,
                 "backgroundImage": {
-                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "jpg"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABUf-zFyHxqQqffWaelC1aR1xtO15LoO1TINdAaHNynqxkxpmxTFWPPdoTESJhTD53qq1R6RwZy7CYBV95H6u4U6g4Ji1CMY58I2G.webp?r=13c",
+                    "width": 848,
+                    "height": 477,
+                    "extension": "webp"
                 },
                 "logoImage": {
-                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "png"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABTOxjEv3IZsgdQLoFgIQruRjYxSZIKQF4GMgJY6nw_WW72JIBO2z_tkVjFXjpp_So1HdxsoS229FzMMQ8zW5i6JoLltUeMXFiQZ843EYM6HwRqyX1P4WpolwHLu9jerdqQ2wxNp1E0P4xWq-g7rNq9_m27bSVv3isLEamL8p-IpmvXiwxCtz.webp?r=512",
+                    "width": 625,
+                    "height": 250,
+                    "extension": "webp"
                 },
-                "type": "show",
-                "runtime": 504,
+                "type": "movie",
+                "runtime": 6379,
                 "genres": [
-                    { "id": 1, "name": "drama" }
-                ]
-            },
-            "episodeCount": 6
+                    { "id": 1, "name": "Action & Adventure" }
+                ],
+                "tags": [
+                    { "id": 1, "name": "Violent"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Mary Elizabeth"},
+                    { "id": 2, "name": "Jun Kunimura"},
+                    { "id": 3, "name": "Woody Harrelson"},
+                    { "id": 4, "name": "Tadanobu Asano"},
+                    { "id": 5, "name": "Miyavi"}
+                ],
+                "synopsis":"Slipped a fatal poison on her final job, a ruthless assassin working in Tokyo has less than 24 hours to find out who ordered the hit and exact revenge.",
+                "title":"Kate",
+                "quality":"HD"
+            }
         },
         {
-            "summary": {
-                "id": 9
-            },
             "jawSummary": {
+                "id": 80221677,
                 "backgroundImage": {
-                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "jpg"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABZtMJvaHJrlK0Ku9nb6GlVw9hvAbNNvB6iAdqLPFo8PH8FCDdY47kVdfyg6chvk8Mvd32LA2q4_zSxcT4SQBcHNmJsyeoZSK7CkC.webp?r=37d",
+                    "width": 848,
+                    "height": 477,
+                    "extension": "webp"
                 },
                 "logoImage": {
-                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "png"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABW9PpC_vEW70JYUldV0_vqGvHbcIb_jwPxhUWM2B5cdabX7-5auSi1XqVw8__4ehuS60d5rn-j-hBISIReJYYWCgrZi-T9zt7HkVa42cnqZxpIcAFufETQqBoWJypD8AEv3mI0sp4ZxOQVlt1ZOJ5qUsvho9LiJOv7Yc6J26PYIZ5KKFYsx_.webp?r=4e0",
+                    "width": 625,
+                    "height": 250,
+                    "extension": "webp"
                 },
-                "type": "show",
-                "runtime": 504,
+                "type": "movie",
+                "runtime": 5201,
                 "genres": [
-                    { "id": 1, "name": "drama" }
-                ]
-            },
-            "episodeCount": 6
+                    { "id": 1, "name": "Action & Adventure" }
+                ],
+                "tags": [
+                    { "id": 1, "name": "Offbeat"},
+                    { "id": 2, "name": "Gritty"},
+                    { "id": 3, "name": "Exciting"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Frank Grillo"},
+                    { "id": 2, "name": "Anthony Mackie"},
+                    { "id": 3, "name": "Marcia Gay"},
+                    { "id": 4, "name": "Teyonah Parris"},
+                    { "id": 5, "name": "Boris McGiver"}
+                ],
+                "synopsis":"To save his pregnant wife, an emergency room nurse unwillingly partners with an injured murder suspect in a race against time and renegade cops.",
+                "title":"Point Blank",
+                "quality":"HD"
+            }
         },
         {
-            "summary": {
-                "id": 10
-            },
             "jawSummary": {
+                "id": 80223052,
                 "backgroundImage": {
-                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "jpg"
+                    "url": "https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABQmCeUQ-lFhCcVnfcLADeS88684A2G1iIWyVj7MBflj936kxAZxHoPsMRhiJZT89Vx7rod8l_nYEpg_y_DI5WjahK1Gvc7tE-JTp",
+                    "width": 848,
+                    "height": 477,
+                    "extension": "jpg?r=530"
                 },
                 "logoImage": {
-                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "png"
+                    "url": "https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABRlGHoctKgBZvBbPBHsx43bmvNtfJbKbB_sc0ZrzS4ZMWCKrpxVv6R3CH0W39X8wOwiB4B8_HW3pJ92sOUltGccvmN9n-3vDliJ6jt3ssWGbARDTJDaqiC4Wl331BmKc84cURObpcrn91vQK1BMgD0SoDMBkRgwIedUsTAeoJ4U7ci2G1OWEgA",
+                    "width": 625,
+                    "height":250,
+                    "extension": "png?r=787"
                 },
-                "type": "show",
-                "runtime": 504,
+                "type": "movie",
+                "runtime": 7131,
                 "genres": [
-                    { "id": 1, "name": "drama" }
-                ]
-            },
-            "episodeCount": 6
+                    { "id": 1, "name": "Canadian" },
+                    { "id": 2, "name": "Action & Adventure"}
+                ],
+                "tags": [
+                    { "id": 1, "name": "Violent"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Mads Mikkelsen"},
+                    { "id": 2, "name": "Vanessa Hudgens"},
+                    { "id": 3, "name": "Katheryn Winnick"},
+                    { "id": 4, "name": "Matt Lucas"},
+                    { "id": 5, "name": "Fei Ren"}
+                ],
+                "synopsis":"An assassin on the verge of retirement must put the good life on hold when his greedy boss sends a squad of young, ruthless killers to take him out.",
+                "title":"Polar",
+                "quality":"HD"
+            }
         },
         {
-            "summary": {
-                "id": 11
-            },
             "jawSummary": {
+                "id": 80230399,
                 "backgroundImage": {
-                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "jpg"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABZal2W-tZ5o--esJ4sY9Xu_UjgwZdkLd6eYx01SVG9uVZhIRLZ87F0fn-jAfcwakVby507_TgdVU9rEVddSLAxx_VSFdE6jtNwBn.webp?r=6aa",
+                    "width": 848,
+                    "height": 477,
+                    "extension": "webp"
                 },
                 "logoImage": {
-                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "png"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABU0fDf-EuuNslA51p-jkaNFLiTn4PGvgxO3hcg555Xw0CBladfqrKtMj2sQvV2ARpSwUZSJOHqvCkBOw4ERe8nexAWBYZWogNX_Y3EtBPu5WFWSO0arnd7_e8MTqlaLSquqvJgCZKDzGFzzWvAbS5mToT-xo2ehOSsmaFffFVyXLVY4YObpp.webp?r=a59",
+                    "width": 625,
+                    "height": 250,
+                    "extension": "webp"
                 },
-                "type": "show",
-                "runtime": 504,
+                "type": "movie",
+                "runtime": 7080,
                 "genres": [
-                    { "id": 1, "name": "drama" }
-                ]
-            },
-            "episodeCount": 6
+                    { "id": 1, "name": "Based on Books" },
+                    { "id": 2, "name": "Action & Adventure"}
+                ],
+                "tags": [
+                    { "id": 1, "name": "Violent"},
+                    { "id": 2, "name": "Gritty"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Chris Hemsworth"},
+                    { "id": 2, "name": "Rudhraksh Jaiswal"},
+                    { "id": 3, "name": "Randeep Hooda"},
+                    { "id": 4, "name": "Golshifteh Farahani"}
+                ],
+                "synopsis":"A hardened gun-for-hire's latest mission becomes a soul-searching race to survive when he's sent into Bangladesh to rescue a drug lord's kidnapped son.",
+                "title":"Extraction",
+                "quality":"HD"
+            }
         },
         {
-            "summary": {
-                "id": 12
-            },
             "jawSummary": {
+                "id": 80236421,
                 "backgroundImage": {
-                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "jpg"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABdn3pFitAxcNGqJAHn4RXgYNHK8ufhCjvuJuwvr_Z2zRtIHosguGP1gEktgDm_Jwmt2sHdc8sap74B7CExF4brTuuFpkGfGCA3ka.webp?r=a32",
+                    "width": 848,
+                    "height": 477,
+                    "extension": "webp"
                 },
                 "logoImage": {
-                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "png"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABZsEyvzmnv_HlmRHU7zYBAlMIIJR3dS386O68MUtbU1HD2QghbjHbOxJxYYG9efPnenEijWylxOb9qFe56NmTdzqwZhEW4sSHYD3tWvCWkxko269SZO0nIya29Ne-qNwa8HLEhLrLKPJB12nEYVoS_8AQAyre1mtYXxXFZA2hQxuQYfUZBQi.webp?r=ed5",
+                    "width": 625,
+                    "height": 250,
+                    "extension": "webp"
                 },
-                "type": "show",
-                "runtime": 504,
+                "type": "movie",
+                "runtime": 5717,
                 "genres": [
-                    { "id": 1, "name": "drama" }
-                ]
-            },
-            "episodeCount": 6
+                    { "id": 1, "name": "Sci-Fi" },
+                    { "id": 2, "name": "Drama"},
+                    { "id": 3, "name":"Action & Adventure"}
+                ],
+                "tags": [
+                    { "id": 1, "name": "Suspenseful"},
+                    { "id": 2, "name": "Exciting"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Michael Peña"},
+                    { "id": 2, "name": "Lizzy Caplan"},
+                    { "id": 3, "name": "Israel Broussard"}
+                ],
+                "synopsis":"Plagued by dreams of an alien invasion, a family man faces his worst nightmare when an extraterrestrial force begins exterminating Earth's inhabitants.",
+                "title":"Extinction",
+                "quality":"HD"
+            }
         },
         {
-            "summary": {
-                "id": 13
-            },
             "jawSummary": {
+                "id": 80238399,
                 "backgroundImage": {
-                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "jpg"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABU_KEWnQHIaFcR8Bgjpcxjbmlm2t1t8RJa2sw5Cv7zmjkG_EtvhGhu1EbfXa_obUeFe0rHpPm6mtd8CJ5hF-KOLAHGbT02CuOTQU.webp?r=036",
+                    "width": 848,
+                    "height": 477,
+                    "extension": "webp"
                 },
                 "logoImage": {
-                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "png"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABZrohLDIGmVUf19kTAQ_jRuk_pmaEsCu6XzJJGIPeJFxuft-wNr7ah9ITYRWB4Za34PPu7mBlWVFHwgezv_cVu8ve8S6eRxlLyPpIAmfrJjB5LhAAqCqOZ6_6y8ZAm_MCE-EaqXS1GFsQU2AiBdoF8Ja9WuC0eWgltlU79SdhxpSZZvyP4yT.webp?r=883",
+                    "width": 625,
+                    "height": 250,
+                    "extension": "webp"
                 },
-                "type": "show",
-                "runtime": 504,
+                "type": "movie",
+                "runtime": 6226,
                 "genres": [
-                    { "id": 1, "name": "drama" }
-                ]
-            },
-            "episodeCount": 6
+                    { "id": 1, "name": "Family" },
+                    { "id": 2, "name": "Kids & Family"},
+                    { "id": 3, "name": "Comedy"},
+                    { "id": 4, "name": "Mystery"}
+                ],
+                "tags": [
+                    { "id": 1, "name": "Exciting"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Sadie Stanley"},
+                    { "id": 2, "name": "Maxwell Simkins"},
+                    { "id": 3, "name": "Ken Marino"},
+                    { "id": 4, "name": "Cree Cicchino"},
+                    { "id": 5, "name": "Jason Scott Lee"}
+                ],
+                "synopsis":"What do you do if your parents are kidnapped by a crew of international thieves? You begin a wild overnight adventure — complete with spy gear.",
+                "title":"The Sleepover",
+                "quality":"HD"
+            }
         },
         {
-            "summary": {
-                "id": 14
-            },
             "jawSummary": {
+                "id": 80993597,
                 "backgroundImage": {
-                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "jpg"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABWo6r30pH82tEvopITxmuIO1zzKeUDP_uLsB5BIWgICOPLyw4Ygnttzlu4wWjOsDNPxoq_PQ_gANB0tjsCjxt6Ir-OoJ9ZKz4EI6.webp?r=11c",
+                    "width": 848,
+                    "height": 477,
+                    "extension": "webp"
                 },
                 "logoImage": {
-                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "png"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABZUOMoFj5S1q8B9XEWfTTImNIFZeqAtD5sJlczLv7MXsweawwL653oT6Xd9cPXLM-97_CC9QS4-WHYoZ3ZVI0zVKJ1O1GTfhfWW3yWSsuOsrnuFiUJqTnulpaMkbCbjoT5vU1bxGPXMJ4d28n0H4LFOdlrLoM4BMPol9FyqyPsHmyfvYCuXB.webp?r=123",
+                    "width": 625,
+                    "height": 250,
+                    "extension": "webp"
                 },
                 "type": "show",
-                "runtime": 504,
                 "genres": [
-                    { "id": 1, "name": "drama" }
-                ]
-            },
-            "episodeCount": 6
+                    { "id": 1, "name": "Kids' TV" },
+                    { "id": 2, "name": "TV Cartoons"}
+                ],
+                "tags": [
+                    { "id": 1, "name": "Exciting"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Sydney Thomas"},
+                    { "id": 2, "name": "Oscar Reyez"},
+                    { "id": 3, "name": "Julieta Cortes"},
+                    { "id": 4, "name": "Nevin Kar"}
+                ],
+                "synopsis":"With hearts, smarts and superpowers, the heroic kids of the Action Academy work together to battle the baddies — and even bring out the good in them!",
+                "title":"Action Pack",
+                "episodeCount":16,
+                "quality":"HD"
+            }
         },
         {
-            "summary": {
-                "id": 15
-            },
             "jawSummary": {
+                "id": 81000511,
                 "backgroundImage": {
-                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "jpg"
+                    "url": "https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABUuQmEEkETWEBzLcFLA7N8ysQToWvli8MiFwS8Lifpes8_MiS5EmOb0yp2AnPp9JaKB2VsIo7UdbiFq6X6I-Kfu16Uy17i4eKWtk",
+                    "width": 848,
+                    "height": 477,
+                    "extension": "jpg?r=9b1"
                 },
                 "logoImage": {
-                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "png"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABRvf_5FsAIhY9ZAcKBTrDF5yKCcODdIFqbLZ6hlhsCJtmo9MYsXxWGkR00HHedd1VNQkuW3431SPAk9LTEUNEzCMejuTeB3UyVzJg7C94Sp-4Q7xxeSPdTXIRMzJM-c8GSaI7k8V9qC_IhBS0x7mdmJI1CuUNF139_-kUb3nUZsepCZ6NP2Z.webp?r=588",
+                    "width": 625,
+                    "height": 250,
+                    "extension": "webp"
                 },
-                "type": "show",
-                "runtime": 504,
+                "type": "movie",
+                "runtime": 6112,
                 "genres": [
-                    { "id": 1, "name": "drama" }
-                ]
-            },
-            "episodeCount": 6
+                    { "id": 1, "name": "Korean" },
+                    { "id": 2, "name": "Martial Arts Movies"},
+                    { "id": 3, "name": "Action & Adventure"}
+                ],
+                "tags": [
+                    { "id": 1, "name": "Violent"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Bruce Khan"},
+                    { "id": 2, "name": "Park Hee-soon"},
+                    { "id": 3, "name": "Yoon Jin-seo"},
+                    { "id": 4, "name": "Kim In-kwon"}
+                ],
+                "synopsis":"Hell-bent on avenging the murder of his family, a former detective infiltrates a remote island that serves as a prison for vicious death row criminals.",
+                "title":"Revenger",
+                "quality":"HD"
+            }
         },
         {
             "summary": {
                 "id": 16
             },
             "jawSummary": {
+                "id": 81001887,
                 "backgroundImage": {
-                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "jpg"
+                    "url": "https://occ-0-2794-2219.1.nflxso.net/dnm/api/v6/6AYY37jfdO6hpXcMjf9Yu5cnmO0/AAAABVqVfVlzSHRdf9-VzauN1LzXFvnuhamJlorGrtMgulyeRG7L49jmQAmK5QL7gi75QZMEuItYonYUdqEd9x5efkapEKAR3xeUV1Nf",
+                    "width": 848,
+                    "height": 477,
+                    "extension": "jpg?r=6fd"
                 },
                 "logoImage": {
-                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "png"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABc8ui2QC8_8N--fUBu00u95bzsT9d3wNW0spfmIcC35-ppZoOEdeJltu2xb7QlHe593ql2MBOa0QBcEeqS7wx2fBsqgirml4XqGFoppuP4g-NFSISkbTtAlBlkcGDPqefaEBv7iHXKIusxPSWtoW2ODknCqNqCwIG8Adi02tobTDSPtWlq4V.webp?r=98b",
+                    "width": 625,
+                    "height": 250,
+                    "extension": "webp"
                 },
-                "type": "show",
-                "runtime": 504,
+                "type": "movie",
+                "runtime": 7733,
                 "genres": [
-                    { "id": 1, "name": "drama" }
-                ]
-            },
-            "episodeCount": 6
+                    { "id": 1, "name": "Action & Adventure" }
+                ],
+                "tags": [
+                    { "id": 1, "name": "Exciting"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Ryan Reynolds"},
+                    { "id": 2, "name": "Mélanie Laurent"},
+                    { "id": 3, "name": "Corey Hawkins"},
+                    { "id": 4, "name": "Dave Franco"}
+                ],
+                "synopsis":"After faking his death, a tech billionaire recruits a team of international operatives for a bold and bloody mission to take down a brutal dictator.",
+                "title":"6 Underground",
+                "quality":"HD"
+            }
         },
         {
             "summary": {
                 "id": 17
             },
             "jawSummary": {
+                "id": 81005258,
                 "backgroundImage": {
-                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "jpg"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABTd8aojVIRVQKvyoCwTJwwNbjy50t9URKQJmMLEFt3gaR5V2-IsUVT9Kjt4zpg28p51vaghzSRSLPkSg4SxmTHpqa9z4GrIDNvH9.webp?r=3f2",
+                    "width": 848,
+                    "height": 477,
+                    "extension": "webp"
                 },
                 "logoImage": {
-                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "png"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABQiNemvQFqnZ03msdxJME9WW-mlzGj2LJ7zhbjbIec1BqrtxT_A--4D3dmyV60nXl8e1rusJJISwdoWy-SrVeN3nEhdq0ur78covGxOSJD48qhWGVl_rjDvt2FGXzcCzJ7DbQkAgHUbyRSYxxlvKApcXeZcn5wj_3QJ9MGmSKWEu5tcgz2kC.webp?r=fe4",
+                    "width": 625,
+                    "height": 250,
+                    "extension": "webp"
                 },
-                "type": "show",
-                "runtime": 504,
+                "type": "movie",
+                "runtime": 6740,
                 "genres": [
-                    { "id": 1, "name": "drama" }
-                ]
-            },
-            "episodeCount": 6
+                    { "id": 1, "name": "Spanish" },
+                    { "id": 2, "name": "Action & Adventure"}
+                ],
+                "tags": [
+                    { "id": 1, "name": "Violent"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Teo García"},
+                    { "id": 2, "name": "Óscar Jaenada"},
+                    { "id": 3, "name": "Óscar Casas"},
+                    { "id": 4, "name": "Andrea Duro"}
+                ],
+                "synopsis":"In this fast-paced and action-packed thriller, a retired hitman — along with his sister and a troubled teen — takes revenge on his lethal stepbrother.",
+                "title":"Xtreme",
+                "quality":"HD"
+            }
         },
         {
-            "summary": {
-                "id": 18
-            },
             "jawSummary": {
+                "id": 81005492,
                 "backgroundImage": {
-                    "url": "https://img.quizur.com/f/img64a40bfa47e509.87968797.jpg?lastEdited=1688472572",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "jpg"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABaCdzB2RPfgwDwG2_eNKT7rpexehUKEuVjXkB9Q9KxC_-IxUYV4qQCQDxj4I8JPHkN7tpDaHWCMZG4_WvKXXLNnRebyWGb1L1cvD.webp?r=036",
+                    "width": 848,
+                    "height": 477,
+                    "extension": "webp"
                 },
                 "logoImage": {
-                    "url": "https://upload.wikimedia.org/wikipedia/fr/c/cf/The_Witcher_%28s%C3%A9rie%29_Logo.png",
-                    "width": 200,
-                    "height": 200,
-                    "extension": "png"
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABSUUsKV-vATjYK4G-YQ2_ewCC-OYxp8RMhDA3_GNvnGFTo4GlEqN6g8iTxR6t7OcKsRNXrApVzkdw8XWaelrmkggJVCLuLsHSmQpjmo151jfEa3kEioZNxJWrDYDvPjY4LNgmAQCVFNEz5E6IUhmtnFkOqAn3egISlnyVR5I1ZlaR-Jtb7KS.webp?r=b48",
+                    "width": 625,
+                    "height": 250,
+                    "extension": "webp"
                 },
-                "type": "show",
-                "runtime": 504,
+                "type": "movie",
+                "runtime": 6673,
                 "genres": [
-                    { "id": 1, "name": "drama" }
-                ]
-            },
-            "episodeCount": 6
+                    { "id": 1, "name": "Comedy" },
+                    { "id": 2, "name": "Mystery "},
+                    { "id": 3, "name": "Based on Books"}
+                ],
+                "tags": [
+                    { "id": 1, "name": "Exciting"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Mark Wahlberg"},
+                    { "id": 2, "name": "Winston Duke"},
+                    { "id": 3, "name": "Alan Arkin"}
+                ],
+                "synopsis":"Spenser, an ex-cop and ex-con, teams up with aspiring fighter Hawk to uncover a sinister conspiracy tied to the deaths of two Boston police officers.",
+                "title":"Spenser Confidential",
+                "quality":"HD"
+            }
+        },
+        {
+            "jawSummary": {
+                "id": 81038588,
+                "backgroundImage": {
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABQjgpHMOhw2JGvjvTEYA2a7z8dS6GEX5xqFLOGVwXDHh2IrW_q2lrwe56z9FEF3MFgCzEzVyt5IaVDzQKbvHHsIoC7EbPGriXVRm.webp?r=9cc",
+                    "width": 848,
+                    "height": 477,
+                    "extension": "webp"
+                },
+                "logoImage": {
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABfstGp-rH7mKIkUH7F3tjdKJqWMzvQnwEgUxLX5sajrHSRonoTYv7EA0tuQ_uPPAE-dsovkOtCp1MwDCOwxI_slWQR3uoddADxFPbGSfU0BzJQKJetmcXqovjOyRhbBiOfbg6-_UYS1wv0T1Mmn9DYqXMmytUX56COvuFxKeLf1m5Ow-ihxK.webp?r=b91",
+                    "width": 625,
+                    "height": 250,
+                    "extension": "webp"
+                },
+                "type": "movie",
+                "runtime": 6395,
+                "genres": [
+                    { "id": 1, "name": "Spanish" },
+                    { "id": 2, "name": "Action & Adventure"}
+                ],
+                "tags": [
+                    { "id": 1, "name": "Gritty"},
+                    { "id": 2, "name": "Suspenseful"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Javier Gutiérrez"},
+                    { "id": 2, "name": "Karra Elejalde"},
+                    { "id": 3, "name": "Luis Callejo"}
+                ],
+                "synopsis":"When a prisoner transfer van is attacked, the cop in charge must fight those inside and outside while dealing with a silent foe: the icy temperatures.",
+                "title":"Below Zero",
+                "quality":"HD"
+            }
+        },
+        {
+            "jawSummary": {
+                "id": 81041495,
+                "backgroundImage": {
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABUZH63-f4Ym2zAF3nVE296BLQ4AB25cQX0e7zrLG6cCCaTotM1Xeg4Jv1ADz9h_uKfohlB4rZ8rVTECjqnKzbJgvrCg7MAQWHYoX.webp?r=5f0",
+                    "width": 848,
+                    "height": 477,
+                    "extension": "webp"
+                },
+                "logoImage": {
+                    "url": "https://occ-0-3933-116.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABV9CnVVGUWl8Kz99LFB261-Yz3Y55u7P-gdyQQ4IZwQvWEURJ8wgtnXeUIu9xVZAaIYTEQdN3ZvVLe5jKPIDg2lSO8iMC3BJqDGkiIH04hbDamAGRxlrgr49Ta3ZUuHNOLaprFRSQHTvAJYzl7IDERyCVg41e8KJcY-dIlizmCKccKStT4qL.webp?r=43e",
+                    "width": 625,
+                    "height": 250,
+                    "extension": "webp"
+                },
+                "type": "movie",
+                "runtime": 5304,
+                "genres": [
+                    { "id": 1, "name": "Dutch" },
+                    { "id": 2, "name": "Action & Adventure"}
+                ],
+                "tags": [
+                    { "id": 1, "name": "Suspenseful"}
+                ],
+                "cast": [
+                    { "id": 1, "name": "Holly Mae"},
+                    { "id": 2, "name": "Géza Weisz"},
+                    { "id": 3, "name": "Frank Lammers"}
+                ],
+                "synopsis":"Framed for murder after uncovering a privacy scandal, an ethical hacker must evade the police while trying to track down the criminals blackmailing her.",
+                "title":"The Takeover",
+                "quality":"HD"
+            }
         }
     ]
 }
