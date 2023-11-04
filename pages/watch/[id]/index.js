@@ -127,7 +127,7 @@ const Watch = ({ data }) => {
                 <div className="w-100 py-2 bg-transparent d-flex align-items-center justify-content-between z-3">
                     <div className="d-flex align-items-center gap-4">
                         <span className="d-flex align-items-center justify-content-center fs-1 text-white" onClick={() => router.push("/browse")}> <FaArrowLeft style={{ cursor: "pointer" }} /> </span>
-                        <span className="text-white fs-5"> {data.jawSummary.title} </span>
+                        { data.jawSummary && <span className="text-white fs-5"> {data.jawSummary.title} </span>}
                     </div>
 
                 </div>
@@ -209,7 +209,7 @@ export async function getStaticPaths() {
 
     return {
         paths,
-        fallback: true
+        fallback: false
     }
 
 }
