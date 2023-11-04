@@ -21,14 +21,11 @@ const Browse = ({ data }) => {
   const [changeNavbar, setChangeNavbar] = useState(false)
   const [slideValue, setSlideValue] = useState([])
   const [display, setDisplay] = useState(false)
-  const [displayBtnNext, setDisplayBtnNext] = useState([])
   const [displayModal, setDisplayModal] = useState({ displayValue: false, data: {}, similarTitles: [] })
   const [indexBrandImg, setIndexBrandImg] = useState({ i1: 0, i2: 0 })
 
 
   const slideRefs = useRef([])
-  const nextBtnRef = useRef([])
-  const prevBtnRef = useRef([])
 
   const videoRef = useRef()
 
@@ -50,9 +47,7 @@ const Browse = ({ data }) => {
     }
 
     setSlideValue(arr)
-    setDisplayBtnNext(arr2)
     slideRefs.current = []
-
     const index1 = Math.trunc(Math.random() * data.length)
     const index2 = Math.trunc(Math.random() * data[index1].length)
 
@@ -62,19 +57,17 @@ const Browse = ({ data }) => {
     })
 
     window.addEventListener("scroll", changeNavbarFunc)
-
     return () => {
       clearTimeout(timeOut)
       window.removeEventListener("scroll", changeNavbarFunc)
     }
-
   }, [])
 
   useEffect(() => {
     if(display){
-      if (displayModal.displayValue) {
+      if(displayModal.displayValue){
         videoRef.current.pause()
-      } else {
+      }else{
         playFunc()
       }
     }
@@ -102,17 +95,6 @@ const Browse = ({ data }) => {
     }
   }
 
-  const addNextBtnRefs = e => {
-    if (e && !nextBtnRef.current.includes(e)) {
-      nextBtnRef.current.push(e)
-    }
-  }
-
-  const addPreviousBtnRefs = e => {
-    if (e && !prevBtnRef.current.includes(e)) {
-      prevBtnRef.current.push(e)
-    }
-  }
 
   const handleDisplay = arg => {
     setDisplay(arg)
@@ -134,9 +116,6 @@ const Browse = ({ data }) => {
       }
     }
     slideRefs.current[index].style.transform = "translateX(-" + slideValue[index] + "%)";
-    if (!(slideValue[index] !== ((parseInt(data[index].length / 4) * 100) - 100))) {
-      displayBtnNext[index] = false
-    }
   }
 
   const handleModal = (arg, element) => {
@@ -162,12 +141,13 @@ const Browse = ({ data }) => {
       {!display ? <Users handleDisplay={handleDisplay} />
         :
         <section>
-          <nav className="d-flex justify-content-between px-5 py-4 gap-2 position-fixed w-100 overflow-x-hidden" style={{ backgroundColor: `${!changeNavbar ? 'transparent' : 'black'}`, top: 0, left: 0, zIndex: 1 }} >
+          <nav className="d-flex justify-content-between px-5 py-4 gap-2 position-fixed w-100 overflow-hidden" style={{ backgroundColor: `${!changeNavbar ? 'transparent' : 'black'}`, top: 0, left: 0, zIndex: 1 }} >
             <div className="d-flex gap-5 p-0 menu position-relative">
 
               <Image src={logoImg} width="90" alt="Picture" />
               <div className="menu-small">
                 <span className="menu-small-device">Browse</span>
+
                 <ul className="align-items-center list-unstyled gap-3">
                   <li>
                     <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}> Home </Link>
@@ -296,8 +276,8 @@ const Browse = ({ data }) => {
                                   <div className="d-flex align-items-center flex-wrap gap-2">
                                     {
                                       item.jawSummary.genres.map(genre => (
-                                        <div className="d-flex align-items-center justify-content-center gap-1"  key={genre.id}>
-                                          <span className="text-white text-gender">
+                                        <div className="d-flex align-items-center justify-content-center gap-1">
+                                          <span key={genre.id} className="text-white text-gender">
                                             {genre.name}
                                           </span>
                                           {
@@ -318,17 +298,15 @@ const Browse = ({ data }) => {
 
                       {<div
                         role="button"
-                        className={`position-absolute start-0 top-0 justify-content-center align-items-center px-1 px-md-2 text-white buttonNextPrev active`}
+                        className={`position-absolute start-0 top-0 justify-content-center align-items-center px-1 px-md-2 text-white buttonNextPrev`}
                         onClick={() => handleSlide("prev", index)}
-                        ref={addPreviousBtnRefs}
                       >
                         <MdArrowBackIos />
                       </div>}
                       {<div
                         role="button"
-                        className={`position-absolute top-0 end-0 justify-content-center align-items-center px-1 px-md-2 text-white buttonNextPrev ${displayBtnNext[index] ? 'active' : ''}`}
+                        className={`position-absolute top-0 end-0 justify-content-center align-items-center px-1 px-md-2 text-white buttonNextPrev`}
                         onClick={(e) => handleSlide("next", index, e)}
-                        ref={addNextBtnRefs}
                       >
                         <MdArrowBackIos style={{ transform: "rotate(180deg)" }} />
                       </div>}
