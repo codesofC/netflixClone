@@ -1,7 +1,7 @@
 export const imgCard = [
-    "/../public/assets/visa.png",
-    "/../public/assets/mastercard.png",
-    "/../public/assets/american.png",
-    "/../public/assets/elo.png",
-    "/../public/assets/hipercard.png"
+    "/assets/visa.png",
+    "/assets/mastercard.png",
+    "/assets/american.png",
+    "/assets/elo.png",
+    "/assets/hipercard.png"
 ]
