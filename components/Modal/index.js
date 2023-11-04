@@ -18,19 +18,19 @@ const Modal = ({ dataC, setDisplayValue, similarTitles, toMyList }) => {
             <div className='d-flex flex-column align-items-center col-11 col-lg-6 justify-content-center position-absolute'>
                 <div className='position-relative d-flex align-items-center justify-content-center w-100 overflow-hidden rounded' style={{ maxHeight: "60vh" }}>
                     {<Image src={`${dataC.jawSummary.backgroundImage.url}.${dataC.jawSummary.backgroundImage.extension}`} alt="Picture" width={dataC.jawSummary.backgroundImage.width} height={dataC.jawSummary.backgroundImage.height} style={{ width: "100%", height: "100%", objectFit: "fill" }} />}
-                    <div className='position-absolute bottom-0 start-0 w-100 h-100 d-flex flex-column align-items-start justify-content-end gap-3 px-4' style={{ background: "linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .9))" }}>
-                        {dataC.jawSummary.logoImage && <Image src={`${dataC.jawSummary.logoImage.url}.${dataC.jawSummary.logoImage.extension}`} alt="Picture" width={dataC.jawSummary.logoImage.width} height={dataC.jawSummary.backgroundImage.height} style={{ width: "70%", height: "auto", objectFit: "cover" }} />}
-                        <div className='d-flex align-items-center justify-content-between px-3 py-5 w-100'>
+                    <div className='position-absolute bottom-0 start-0 w-100 h-100 d-flex flex-column align-items-start justify-content-end gap-3 px-1 px-md-4 name-logo' style={{ background: "linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .9))" }}>
+                        {dataC.jawSummary.logoImage && <Image src={`${dataC.jawSummary.logoImage.url}.${dataC.jawSummary.logoImage.extension}`} alt="Picture" width={dataC.jawSummary.logoImage.width} height={dataC.jawSummary.backgroundImage.height} />}
+                        <div className='d-flex align-items-center justify-content-between px-3 py-4 py-sm-5 w-100'>
                             <div className='d-flex align-items-center gap-3'>
-                                <span className='fs-4 d-flex align-items-center gap-3 bg-white px-4 py-1 rounded text-black' role="button" onClick={() => router.push(`/watch/${dataC.jawSummary.id}`)}> <FaPlay className='fs-2' /> Play </span>
+                                <span className='fs-4 d-flex align-items-center gap-3 bg-white px-4 py-1 rounded text-black' role="button" onClick={() => router.push(`/watch/${dataC.jawSummary.id}`)}> <FaPlay /> Play </span>
                                 <span 
-                                    className='d-flex fs-3 text-white border p-2 rounded-circle' 
+                                    className='d-flex fs-4 text-white border p-2 rounded-circle' 
                                     role="button"
                                     onClick={() => addOrRemoveToList(dataC)}
                                 > {
                                     toMyList(dataC.jawSummary.id) !== -1 ? <BsCheckLg /> : <BsPlusLg /> 
                                 } </span>
-                                <span className='d-flex fs-3 text-white border p-2 rounded-circle' role="button"> <AiOutlineLike /> </span>
+                                <span className='d-flex fs-4 text-white border p-2 rounded-circle' role="button"> <AiOutlineLike /> </span>
                             </div>
                             <span className='d-flex fs-4 text-white border p-2 rounded-circle' role="button"> <RxSpeakerLoud /> </span>
                         </div>
@@ -49,7 +49,7 @@ const Modal = ({ dataC, setDisplayValue, similarTitles, toMyList }) => {
                     <div className='d-flex justify-content-between align-items-start gap-2 px-2 px-md-4 px-lg-5 py-5'>
                         <div className='d-flex flex-column gap-4' style={{ width: "50%" }}>
                             <div className='d-flex flex-wrap align-items-center gap-3 fs-6' style={{ color: "#969695" }}>
-                                <span className='text-success'>Recommended 90%</span>
+                                <span className='text-success' style={{fontSize: "13px"}}>Recommended 90%</span>
                                 {
                                     dataC.jawSummary.type === 'show' ? <span style={{ color: "#969695" }} className="movieOrSerie">
                                         {dataC.episodeCount ? dataC.episodeCount : 'x'} episodes
@@ -130,7 +130,7 @@ const Modal = ({ dataC, setDisplayValue, similarTitles, toMyList }) => {
                                         </div>
                                         <div className='d-flex align-items-center justify-content-between px-2'>
                                             <div className='d-flex flex-column gap-1'>
-                                                <div className='text-success'>Recommended 80%</div>
+                                                <div className='text-success' style={{fontSize: "13px"}}>Recommended 80%</div>
                                                 <p className='d-flex align-items-center gap-2 text-white'>
                                                     <span className='px-1 py-1 bg-danger rounded' style={{ fontSize: "12px" }}>A14</span>
                                                 </p>

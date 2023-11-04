@@ -58,6 +58,11 @@ input:focus{
   height: auto;
   display: block;
 }
+.global-body{
+  background: linear-gradient(transparent 2%, #00081d 5%);
+  width: 100%;
+  top: 80%;
+}
 .global-body .foot-section{
   padding: 0 15%;
 }
@@ -219,6 +224,12 @@ input[type="radio"]{
   height: 8vh;
   top: -2rem;
 }
+.name-logo img{
+  width: 80%;
+  height: auto;
+  object-fit: cover;
+}
+
 
 /* =============== Player Video =======================*/
 .fullscreen .container-video video{
@@ -230,7 +241,7 @@ input[type="radio"]{
 
 }
 .container-video video{
-  width: 92%; 
+  width: 96%; 
   height: 100%; 
   object-fit: cover;
 }
@@ -267,7 +278,8 @@ input[type="radio"]{
 .text-gender{
   font-size: 13px;
 }
-.icon-video:hover{
+.icon-video{
+  font-size: 200%;
   transform: scale(1);
   transition: transform .2s ease-in-out;
 }
@@ -305,7 +317,8 @@ input[type="radio"]{
     z-index: 1000;
     display: none;
   }
-  .menu .menu-small:hover ul{
+  .menu .menu-small:hover ul
+  {
     display: flex;
   }
   .menu ul li{
@@ -401,11 +414,32 @@ input[type="radio"]{
   .shadow-element{
     top: -1.7rem;
   }
+  .icon-video{
+    font-size: 150%;
+  }
 }
 
 @media (max-width: 500px){
+  .name-logo img{
+    width: 65%;
+  }
   .shadow-element{
-    height: 12vh;
-    top: -3rem;
+    top: -1.6rem;
+  }
+  .global-body{
+    background: linear-gradient(transparent 1%, #00081d 3%);
+    top: 88%;
+  }
+}
+@media (max-width: 350px){
+  .text-timeline{
+    font-size: 85%;
+  }
+  .icon-video{
+    font-size: 120%;
+  }
+  .shadow-element{
+    height: 10vh;
+    top: -2rem;
   }
 }

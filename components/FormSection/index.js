@@ -18,7 +18,7 @@ const FormSection = () => {
         Quer assistir? Informe seu email para criar ou reiniciar sua assinatura.
       </p>
       <div className="gap-1 row">
-        <div class="form-floating col-8 col-lg-7">
+        <div className="form-floating col-12 col-md-7">
           <input
             type="email"
             className="form-control bg-transparent"
@@ -32,10 +32,10 @@ const FormSection = () => {
             Email
           </label>
         </div>
-        <div className="button col-5 col-lg-4">
+        <div className="button col-8 col-md-4">
           <button
             type="submit"
-            className="btn text-white fs-5 py-2 py-lg-3"
+            className="btn text-white py-2 py-lg-3"
             style={{ background: "red" }}
             onClick={handlePage}
           >

@@ -36,11 +36,11 @@ export default function Home({ body, questions, links }) {
           <span>
             Planos a partir de <span className="fs-5 fw-700">R$18,90.</span>
           </span>
-          <span className="d-flex align-items-center">
-            <a href="" className="text-decoration-none fs-6">
+          <span className="d-flex align-items-center" style={{fontSize: "14px"}}>
+            <a href="" className="text-decoration-none">
               Sabia mais
             </a>
-            <BsChevronRight className="fs-6 fw-800" />
+            <BsChevronRight className="fw-800" />
           </span>
         </div>
 
@@ -49,7 +49,7 @@ export default function Home({ body, questions, links }) {
           className="position-relative"
           style={{ maxHeight: "90vh", overflow: "hidden"}}
         >
-          <Image style={{ maxHeight: "100vh" }} src={brandImg} className="" />
+          <Image style={{ maxHeight: "100vh" }} alt="logo" src={brandImg} className="" priority />
           <div
             className="position-absolute top-0 start-0 d-flex flex-column justify-content-center"
             style={{
@@ -60,7 +60,7 @@ export default function Home({ body, questions, links }) {
           >
             <header className="position-absolute top-0 d-flex justify-content-between w-100 align-items-center px-3 py-3 px-lg-5">
               <div style={{ width: "30%" }}>
-                <Image width='150' src={logoNetflix} className='logo' />
+                <Image width='150' src={logoNetflix} alt="logo" className='logo' />
               </div>
               <div className="d-flex gap-1">
                 <div className="">
@@ -98,12 +98,7 @@ export default function Home({ body, questions, links }) {
 
         {/* BODY SECTION */}
         <div
-          style={{
-            background: "linear-gradient(transparent 2%, #00081d 5%)",
-            width: "100%",
-            top: "80%",
-          }}
-          className="global-body position-absolute px-5"
+          className="global-body position-absolute px-3 px-md-5"
         >
           <BodySection body={body} url={tv} />
           <div className="foot-section">

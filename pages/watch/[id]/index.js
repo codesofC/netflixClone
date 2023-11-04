@@ -135,13 +135,13 @@ const Watch = ({ data }) => {
                     <div className="d-flex align-items-center justify-content-between gap-2">
                         <div
                             className="position-relative" role="button"
-                            style={{ width: "97%", backgroundColor: "rgba(255, 255, 255, .6)", height: "4px", borderRadius: "5px" }}
+                            style={{ width: "95%", backgroundColor: "rgba(255, 255, 255, .6)", height: "4px", borderRadius: "5px" }}
                             onClick={getProgress}
                         >
                             <div className="progress-bar" ref={progressBarRef}></div>
                             <span className="progress-thumb" ref={progressBarThumb}></span>
                         </div>
-                        <span className="text-white">
+                        <span className="text-white text-timeline">
                             {
                                 fullTime.hour !== 0 ?
                                     (
@@ -154,13 +154,13 @@ const Watch = ({ data }) => {
                         </span>
                     </div>
                     <div className="d-flex align-items-center justify-content-between w-100">
-                        <div className="d-flex align-items-center justify-content-center gap-4 fs-1 text-white">
+                        <div className="d-flex align-items-center justify-content-center gap-2 gap-md-4 text-white">
                             <span role="button" onClick={playPauseFunction}> {playItem && !isEnd ? <FaPause className="icon-video" /> : <FaPlay className="icon-video" />} </span>
                             <span role="button" onClick={handleBackward}> <FiRotateCcw className="icon-video" /> </span>
                             <span role="button" onClick={handleForward}> <FiRotateCw className="icon-video" /> </span>
                             <span role="button" onClick={handleVolume}> {volume ? <IoVolumeHighOutline className="icon-video" /> : <IoVolumeMuteOutline className="icon-video" />} </span>
                         </div>
-                        <div className="d-flex align-items-center justify-content-center gap-4 fs-1 text-white">
+                        <div className="d-flex align-items-center justify-content-center gap-2 gap-md-4 text-white">
                             <span role="button"> <TfiCommentAlt className="icon-video" /> </span>
                             <span role="button"> <SiSpeedtest className="icon-video" /> </span>
                             <span role="button" onClick={handleFullScreen}>

@@ -7,7 +7,7 @@ const BodySection = ({ body }) => {
     <div className="container-md" style={{background: "#090626"}}>
       {
         body.map(item => (
-          <section key={item.index} className={`section-tv row py-5 mx-4 justify-content-center align-items-center ${item.index < body.length ? "border-bottom border-secondary" : ""}`}>
+          <section key={item.index} className={`section-tv row py-5 mx-2 mx-md-4 justify-content-center align-items-center ${item.index < body.length ? "border-bottom border-secondary" : ""}`}>
             <div className="col-12 col-md-6">
               <h1 className="text-white fs-1">{ item.title }</h1>
               <p className="text-white fs-6">

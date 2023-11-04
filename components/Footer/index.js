@@ -3,7 +3,7 @@ import Link from "next/link";
 const Footer = ({ links, background }) => {
 
 
-  const bg = background ? background : ""
+  const bg = background ? background : "transparent"
 
   return (
     <footer className={`d-flex flex-column gap-4 mt-5 ${bg ? 'p-3' : ''}`} style={{background: bg}}>
