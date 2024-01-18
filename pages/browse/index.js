@@ -141,7 +141,7 @@ const Browse = ({ data }) => {
       {!display ? <Users handleDisplay={handleDisplay} />
         :
         <section>
-          <nav className="d-flex justify-content-between px-5 py-4 gap-2 position-fixed w-100 overflow-hidden" style={{ backgroundColor: `${!changeNavbar ? 'transparent' : 'black'}`, top: 0, left: 0, zIndex: 1 }} >
+          <nav className="d-flex justify-content-between px-5 py-4 gap-2 position-fixed w-100 overflowX-hidden" style={{ backgroundColor: `${!changeNavbar ? 'transparent' : 'black'}`, top: 0, left: 0, zIndex: 1 }} >
             <div className="d-flex gap-5 p-0 menu position-relative">
 
               <Image src={logoImg} width="90" alt="Picture" />
@@ -150,22 +150,22 @@ const Browse = ({ data }) => {
 
                 <ul className="align-items-center list-unstyled gap-3">
                   <li>
-                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}> Home </Link>
+                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}> Início </Link>
                   </li>
                   <li>
-                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}> Series </Link>
+                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}> Séries </Link>
                   </li>
                   <li>
-                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}> Movies </Link>
+                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}> Filmes </Link>
                   </li>
                   <li>
-                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}>Most watched new releases</Link>
+                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}>Bombando</Link>
                   </li>
                   <li>
-                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}>My list</Link>
+                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}>Minha lista</Link>
                   </li>
                   <li>
-                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}>Explore by language</Link>
+                    <Link href="" className="text-white decoration" style={{ fontSize: "14px" }}>Navegar por idiomas</Link>
                   </li>
                 </ul>
               </div>
@@ -195,8 +195,8 @@ const Browse = ({ data }) => {
                     {data[indexBrandImg.i1][indexBrandImg.i2].jawSummary.synopsis}
                   </p>
                   <p className="d-flex gap-5 mt-4">
-                    <span role="button" className="bg-white d-flex align-items-center gap-2 text-black px-2 px-md-4 py-1 rounded" style={{ fontSize: "14px" }} onClick={() => router.push(`/watch/${data[indexBrandImg.i1][indexBrandImg.i2].jawSummary.id}`)}> <FaPlay /> Play </span>
-                    <span role="button" className="bg-dark d-flex align-items-center gap-2 text-white rounded px-2 px-md-4 py-1" style={{ fontSize: "14px" }} onClick={() => handleModal(data[indexBrandImg.i1][indexBrandImg.i2], data[indexBrandImg.i1])}> <AiOutlineInfoCircle /> More infos </span>
+                    <span role="button" className="bg-white d-flex align-items-center gap-2 text-black px-2 px-md-4 py-1 rounded" style={{ fontSize: "14px" }} onClick={() => router.push(`/watch/${data[indexBrandImg.i1][indexBrandImg.i2].jawSummary.id}`)}> <FaPlay /> Assistir </span>
+                    <span role="button" className="bg-dark d-flex align-items-center gap-2 text-white rounded px-2 px-md-4 py-1" style={{ fontSize: "14px" }} onClick={() => handleModal(data[indexBrandImg.i1][indexBrandImg.i2], data[indexBrandImg.i1])}> <AiOutlineInfoCircle /> Mais informações </span>
                   </p>
                 </div>
                 <div className="d-flex align-items-center justify-content-center gap-2 gap-md-3 text-white fs-6">
@@ -219,7 +219,7 @@ const Browse = ({ data }) => {
                 {data && data.map((element, index) => (
 
                   <div className="w-100 position-relative containerSlide" key={index}>
-                    <h1 className="fs-4 fw-bold text-white px-4"> Action movies and series </h1>
+                    <h1 className="fs-4 fw-bold text-white px-4"> Filmes e séries de ação </h1>
                     <div className="position-relative">
 
                       <div

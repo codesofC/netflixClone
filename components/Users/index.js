@@ -8,7 +8,7 @@ const Users = ({ handleDisplay }) => {
 
     return (
         <div className='w-100 d-flex flex-column align-items-center justify-content-center gap-4 px-4' style={{ height: "100vh", background: "#141414" }}>
-            <h1 className="text-white user-title">Who's watching?</h1>
+            <h1 className="text-white user-title">Quem está assistindo?</h1>
             <div className="w-100 d-flex gap-3 align-items-center justify-content-center flex-wrap px-5">
                 <div className="d-flex flex-column gap-2 flex-wrap align-items-center browse-user" role="button" onClick={() => handleDisplay(true)}>
                     <div className="profil-browse">
